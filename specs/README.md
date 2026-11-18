@@ -14,6 +14,7 @@ supply. Write or update the spec first, then the template.
 | IDSR immediate notification | Afiax Clinical Suite, Kenya | [idsr-immediate.md](idsr-immediate.md) | | Spec |
 | Signup confirmation | Oortcloud Console | [signup-confirmation.md](signup-confirmation.md) | | Spec |
 | Services ready | Oortcloud Console | [services-ready.md](services-ready.md) | | Spec |
+| Setup needs a hand (provisioning failed) | Oortcloud Console (`provisioning.py` `notify_failed`) | to write | | Not yet specced |
 | Billing notices | Oortcloud Console | [billing-notice.md](billing-notice.md) | | Spec |
 | Access review due or overdue | Oortcloud Console | [access-review.md](access-review.md) | | Spec |
 | Training overdue | Oortcloud Console | [training-overdue.md](training-overdue.md) | | Spec |

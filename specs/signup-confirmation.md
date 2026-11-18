@@ -4,6 +4,9 @@
 **Sent to:** the admin email given on the signup form
 **Trigger:** someone submits the signup form at `account.`
 
+Since console 0.12.0 this is the only signup email: the Afiax IAM setup link is shown on the
+confirmation page, not sent as a separate invitation (ADR-015 §11).
+
 ## Subject and preview line
 
 - Subject: `Confirm your email to start your Oortcloud trial`
