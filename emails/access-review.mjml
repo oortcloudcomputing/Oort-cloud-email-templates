@@ -1,0 +1,56 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-include path="./partials/oortcloud-head.mjml" />
+    <mj-title>Access review</mj-title>
+    <mj-preview>{{undecidedCount}} people to check by {{dueOn}}. Nothing changes until you decide.</mj-preview>
+  </mj-head>
+
+  <mj-body background-color="#F1F5F9" width="600px">
+    <mj-include path="./partials/oortcloud-header.mjml" />
+
+    <mj-section background-color="#ffffff" padding="18px 32px 30px 32px">
+      <mj-column>
+        <mj-text mj-class="h1">{{#isOverdue}}Your access review is overdue{{/isOverdue}}{{^isOverdue}}Time to review who has access{{/isOverdue}}</mj-text>
+        <mj-text>
+          {{#isOverdue}}The review of {{reviewTitle}} was due on {{dueOn}}, and {{undecidedCount}} people still need a decision.{{/isOverdue}}{{^isOverdue}}A review of who has access to {{reviewTitle}} is open, with {{undecidedCount}} people to check.{{/isOverdue}}
+          You're getting this because you're the reviewer: {{reason}}
+        </mj-text>
+
+        <mj-text padding="4px 0 22px 0">
+          <table class="em-details" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td class="k">Review</td><td class="v">{{reviewTitle}}</td></tr>
+            <tr><td class="k">People to decide</td><td class="v">{{undecidedCount}}</td></tr>
+            <tr><td class="k" style="border-bottom:0;">Due</td><td class="v" style="border-bottom:0;">{{dueOn}}{{#isOverdue}} (overdue){{/isOverdue}}</td></tr>
+          </table>
+        </mj-text>
+
+        <mj-text mj-class="h2">What to do</mj-text>
+        <mj-text>
+          <strong style="color:#1B2A4A;">1. Open the review.</strong><br />
+          <strong style="color:#1B2A4A;">2. For each person,</strong> choose <strong>Keep</strong> if they still need their access, or <strong>Remove</strong> to switch it off.<br />
+          <strong style="color:#1B2A4A;">3. You're done</strong> when everyone has a decision. It takes about a minute per person.
+        </mj-text>
+        <mj-button href="{{reviewUrl}}">Open the review</mj-button>
+        <mj-text mj-class="small" padding="0 0 18px 0">
+          If the button doesn't work, copy this link into your browser:<br /><span class="em-url">{{reviewUrl}}</span>
+        </mj-text>
+
+        <mj-text mj-class="h2">What happens next</mj-text>
+        <mj-text>
+          Nobody's access changes until you decide: nothing is removed automatically. {{#isOverdue}}You'll get this reminder every week until the review is finished, and overdue reviews are reported to {{escalation}}.{{/isOverdue}}{{^isOverdue}}If it isn't finished by {{dueOn}}, you'll get a weekly reminder.{{/isOverdue}}
+        </mj-text>
+
+        <mj-text padding="8px 0 0 0">
+          <table class="em-help" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td>
+              <strong style="color:#1B2A4A;">Not sure about someone?</strong><br />
+              Keep their access and ask {{securityContact}}{{#securityEmail}} at <a href="mailto:{{securityEmail}}">{{securityEmail}}</a>{{/securityEmail}}.
+            </td></tr>
+          </table>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./partials/oortcloud-footer.mjml" />
+  </mj-body>
+</mjml>

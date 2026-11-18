@@ -1,0 +1,25 @@
+{{#isManager}}{{personName}} has overdue training{{/isManager}}{{^isManager}}Your required training is overdue{{/isManager}}
+
+{{#isManager}}Hello {{managerName}}, {{personName}}'s required training below is overdue. You're getting this because you're their manager{{#forTenant}} or their organisation's administrator{{/forTenant}}.{{/isManager}}{{^isManager}}Hello {{personName}}, the required training below is overdue. It's required for your role: {{reason}}{{/isManager}}
+
+{{#courses}}
+  {{title}}, was due {{dueOn}}{{#lessons}} ({{lessons}} lessons){{/lessons}}
+{{#url}}
+  {{url}}
+{{/url}}
+{{/courses}}
+
+WHAT TO DO
+
+{{^isManager}}Open each course above and work through it in the Oortcloud Academy. Your progress is saved as you go, so you can stop and come back.{{#academyUrl}}
+Academy: {{academyUrl}}{{/academyUrl}}{{/isManager}}{{#isManager}}Please make time for {{personName}} to finish it. Nothing else is needed from you.{{/isManager}}
+
+WHAT HAPPENS NEXT
+
+Reminders go out every week until it's done{{^isManager}}, and your manager gets a copy{{/isManager}}. Overdue training never blocks anyone's access.
+
+QUESTIONS ABOUT THE TRAINING?
+
+Email {{trainingContact}}.
+
+{{> footer}}

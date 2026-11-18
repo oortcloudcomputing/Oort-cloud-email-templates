@@ -1,0 +1,43 @@
+{{headline}}
+
+Hello {{adminName}},
+
+{{message}}
+
+You're getting this because you're {{organisationName}}'s administrator on Oortcloud.
+{{#invoiceNumber}}
+
+  Invoice:       {{invoiceNumber}}
+{{#amount}}
+  Amount due:    KES {{amount}}
+{{/amount}}
+{{#dueDate}}
+  Due:           {{dueDate}}
+{{/dueDate}}
+  Organisation:  {{organisationName}}
+{{/invoiceNumber}}
+{{#showPay}}
+
+HOW TO PAY
+
+{{#mpesaPaybill}}
+M-Pesa: Lipa na M-Pesa, Pay Bill, business number {{mpesaPaybill}}, account number {{mpesaAccount}}{{#amount}}, amount KES {{amount}}{{/amount}}. It's matched to your bill automatically.
+
+{{/mpesaPaybill}}
+M-Pesa prompt or card: open Bills and payments in your portal and choose Pay:
+{{billingUrl}}
+{{/showPay}}
+{{#next}}
+
+WHAT HAPPENS NEXT
+
+{{next}}
+{{/next}}
+
+QUESTIONS ABOUT YOUR BILL?
+
+Email Oortcloud at {{supportEmail}} and quote {{#invoiceNumber}}{{invoiceNumber}}{{/invoiceNumber}}{{^invoiceNumber}}{{tenantId}}{{/invoiceNumber}}.{{#showPay}}
+Already paid? Thank you, you can ignore this. Payments can take a few minutes to show in the portal.{{/showPay}}
+
+Sent by Oortcloud, Oort Cloud Computing Limited, the company behind Afiax Connected Healthcare.
+Oortcloud will never ask for your password by email or phone.

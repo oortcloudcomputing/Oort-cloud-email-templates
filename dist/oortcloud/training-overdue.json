@@ -1,0 +1,15 @@
+{
+  "subject": "{{#isManager}}{{personName}} has overdue required training{{/isManager}}{{^isManager}}Reminder: {{courseCount}} required course{{^oneCourse}}s{{/oneCourse}} overdue{{/isManager}}",
+  "fields": {
+    "personName": "The learner.",
+    "isManager": "true for the copy to their manager (or the customer's admin).",
+    "managerName": "The manager's name, in the manager's copy.",
+    "forTenant": "true when the learner works for a customer (their admin gets the copy).",
+    "reason": "Why it's required, e.g. \"every Oortcloud engineer takes it in their first month.\"",
+    "courses": "List of {title, dueOn, lessons, url}: each overdue course with its direct Academy link.",
+    "courseCount": "How many are overdue.",
+    "oneCourse": "true when exactly one is overdue.",
+    "academyUrl": "Optional. The Academy.",
+    "trainingContact": "Who to ask, an email address."
+  }
+}

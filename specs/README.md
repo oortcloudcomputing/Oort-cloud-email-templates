@@ -15,9 +15,9 @@ supply. Write or update the spec first, then the template.
 | Signup confirmation | Oortcloud Console | [signup-confirmation.md](signup-confirmation.md) | [emails/signup-confirmation](../emails/signup-confirmation.mjml) | **Built** |
 | Services ready | Oortcloud Console | [services-ready.md](services-ready.md) | [emails/services-ready](../emails/services-ready.mjml) | **Built** |
 | Setup needs a hand (provisioning failed) | Oortcloud Console (`provisioning.py` `notify_failed`) | (in the template's .json) | [emails/setup-needs-a-hand](../emails/setup-needs-a-hand.mjml) | **Built** |
-| Billing notices | Oortcloud Console | [billing-notice.md](billing-notice.md) | | Spec |
-| Access review due or overdue | Oortcloud Console | [access-review.md](access-review.md) | | Spec |
-| Training overdue | Oortcloud Console | [training-overdue.md](training-overdue.md) | | Spec |
+| Billing notices | Oortcloud Console | [billing-notice.md](billing-notice.md) | [emails/billing-notice](../emails/billing-notice.mjml) | **Built** |
+| Access review due or overdue | Oortcloud Console | [access-review.md](access-review.md) | [emails/access-review](../emails/access-review.mjml) | **Built** |
+| Training overdue | Oortcloud Console | [training-overdue.md](training-overdue.md) | [emails/training-overdue](../emails/training-overdue.mjml) | **Built** |
 
 The console renders the `oortcloud` brand from `dist/python/oortcloud-email-templates.json`
 (copied to oortcloud_console/email_templates.json) with the same Mustache subset as Afiax FHIR.

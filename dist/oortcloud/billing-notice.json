@@ -1,0 +1,21 @@
+{
+  "subject": "{{subject}}",
+  "fields": {
+    "subject": "The notice's subject, e.g. \"Afiax invoice ACC-SINV-2026-00012 is overdue\".",
+    "preview": "Preview line.",
+    "headline": "The heading in the email.",
+    "message": "What happened, in one or two sentences, with the amount and date in words.",
+    "adminName": "The administrator's name.",
+    "organisationName": "The organisation.",
+    "tenantId": "The organisation ID, to quote when there is no invoice.",
+    "invoiceNumber": "Optional. The invoice the notice is about.",
+    "amount": "Optional. Amount due in KES, formatted, e.g. 6,960.",
+    "dueDate": "Optional. Due date, e.g. 26 Nov 2026.",
+    "showPay": "true when there is something to pay.",
+    "mpesaPaybill": "Optional. Oortcloud's M-Pesa business number.",
+    "mpesaAccount": "The account number for the paybill: the invoice number, or the organisation ID.",
+    "billingUrl": "The portal's Bills and payments page.",
+    "next": "Optional. What happens next, with the date, stated as a fact.",
+    "supportEmail": "Oortcloud support address."
+  }
+}

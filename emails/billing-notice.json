@@ -1,0 +1,54 @@
+{
+  "brand": "oortcloud",
+  "subject": "{{subject}}",
+  "fields": {
+    "subject": "The notice's subject, e.g. \"Afiax invoice ACC-SINV-2026-00012 is overdue\".",
+    "preview": "Preview line.",
+    "headline": "The heading in the email.",
+    "message": "What happened, in one or two sentences, with the amount and date in words.",
+    "adminName": "The administrator's name.",
+    "organisationName": "The organisation.",
+    "tenantId": "The organisation ID, to quote when there is no invoice.",
+    "invoiceNumber": "Optional. The invoice the notice is about.",
+    "amount": "Optional. Amount due in KES, formatted, e.g. 6,960.",
+    "dueDate": "Optional. Due date, e.g. 26 Nov 2026.",
+    "showPay": "true when there is something to pay.",
+    "mpesaPaybill": "Optional. Oortcloud's M-Pesa business number.",
+    "mpesaAccount": "The account number for the paybill: the invoice number, or the organisation ID.",
+    "billingUrl": "The portal's Bills and payments page.",
+    "next": "Optional. What happens next, with the date, stated as a fact.",
+    "supportEmail": "Oortcloud support address."
+  },
+  "samples": {
+    "overdue": {
+      "subject": "Afiax invoice ACC-SINV-2026-00012 is overdue",
+      "preview": "KES 6,960 was due on 19 Nov 2026.",
+      "headline": "Your invoice is overdue",
+      "message": "Invoice ACC-SINV-2026-00012 for KES 6,960 was due on 19 Nov 2026 and hasn't been paid yet.",
+      "adminName": "Jane Wanjiku",
+      "organisationName": "Mama Pharmacy",
+      "tenantId": "mama-pharmacy",
+      "invoiceNumber": "ACC-SINV-2026-00012",
+      "amount": "6,960",
+      "dueDate": "19 Nov 2026",
+      "showPay": true,
+      "mpesaPaybill": "4123456",
+      "mpesaAccount": "ACC-SINV-2026-00012",
+      "billingUrl": "https://account.afiax.africa/portal/bills",
+      "next": "If it is still unpaid on 10 Dec 2026, Afiax becomes read-only for Mama Pharmacy: your team can still sign in, read and export, but not add or change records.",
+      "supportEmail": "billing@afiax.africa"
+    },
+    "trial-ending": {
+      "subject": "Your Afiax trial ends in 7 days",
+      "preview": "Your subscription then starts at KES 6,000 a month plus VAT.",
+      "headline": "Your trial ends on 19 Dec 2026",
+      "message": "Your free trial ends in 7 days. Your subscription then starts at KES 6,000 a month plus VAT; you can change this under Bills and payments.",
+      "adminName": "Jane Wanjiku",
+      "organisationName": "Mama Pharmacy",
+      "tenantId": "mama-pharmacy",
+      "showPay": false,
+      "billingUrl": "https://account.afiax.africa/portal/bills",
+      "supportEmail": "billing@afiax.africa"
+    }
+  }
+}

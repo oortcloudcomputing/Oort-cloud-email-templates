@@ -1,0 +1,33 @@
+Subject: Afiax invoice ACC-SINV-2026-00012 is overdue
+
+Your invoice is overdue
+
+Hello Jane Wanjiku,
+
+Invoice ACC-SINV-2026-00012 for KES 6,960 was due on 19 Nov 2026 and hasn't been paid yet.
+
+You're getting this because you're Mama Pharmacy's administrator on Oortcloud.
+
+  Invoice:       ACC-SINV-2026-00012
+  Amount due:    KES 6,960
+  Due:           19 Nov 2026
+  Organisation:  Mama Pharmacy
+
+HOW TO PAY
+
+M-Pesa: Lipa na M-Pesa, Pay Bill, business number 4123456, account number ACC-SINV-2026-00012, amount KES 6,960. It's matched to your bill automatically.
+
+M-Pesa prompt or card: open Bills and payments in your portal and choose Pay:
+https://account.afiax.africa/portal/bills
+
+WHAT HAPPENS NEXT
+
+If it is still unpaid on 10 Dec 2026, Afiax becomes read-only for Mama Pharmacy: your team can still sign in, read and export, but not add or change records.
+
+QUESTIONS ABOUT YOUR BILL?
+
+Email Oortcloud at billing@afiax.africa and quote ACC-SINV-2026-00012.
+Already paid? Thank you, you can ignore this. Payments can take a few minutes to show in the portal.
+
+Sent by Oortcloud, Oort Cloud Computing Limited, the company behind Afiax Connected Healthcare.
+Oortcloud will never ask for your password by email or phone.

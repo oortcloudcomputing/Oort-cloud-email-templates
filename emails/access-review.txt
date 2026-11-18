@@ -1,0 +1,23 @@
+{{#isOverdue}}Your access review is overdue{{/isOverdue}}{{^isOverdue}}Time to review who has access{{/isOverdue}}
+
+{{#isOverdue}}The review of {{reviewTitle}} was due on {{dueOn}}, and {{undecidedCount}} people still need a decision.{{/isOverdue}}{{^isOverdue}}A review of who has access to {{reviewTitle}} is open, with {{undecidedCount}} people to check.{{/isOverdue}} You're getting this because you're the reviewer: {{reason}}
+
+  Review:            {{reviewTitle}}
+  People to decide:  {{undecidedCount}}
+  Due:               {{dueOn}}{{#isOverdue}} (overdue){{/isOverdue}}
+
+WHAT TO DO
+
+1. Open the review: {{reviewUrl}}
+2. For each person, choose Keep if they still need their access, or Remove to switch it off.
+3. You're done when everyone has a decision. It takes about a minute per person.
+
+WHAT HAPPENS NEXT
+
+Nobody's access changes until you decide: nothing is removed automatically. {{#isOverdue}}You'll get this reminder every week until the review is finished, and overdue reviews are reported to {{escalation}}.{{/isOverdue}}{{^isOverdue}}If it isn't finished by {{dueOn}}, you'll get a weekly reminder.{{/isOverdue}}
+
+NOT SURE ABOUT SOMEONE?
+
+Keep their access and ask {{securityContact}}{{#securityEmail}} at {{securityEmail}}{{/securityEmail}}.
+
+{{> footer}}

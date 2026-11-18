@@ -1,0 +1,26 @@
+Subject: Access review: 6 people to check by 15 Dec 2026
+
+Time to review who has access
+
+A review of who has access to Mama Pharmacy, 2026 Q4 is open, with 6 people to check. You're getting this because you're the reviewer: you're Mama Pharmacy's administrator, and this is the quarterly check of who can open its Afiax services.
+
+  Review:            Mama Pharmacy, 2026 Q4
+  People to decide:  6
+  Due:               15 Dec 2026
+
+WHAT TO DO
+
+1. Open the review: https://account.afiax.africa/portal/review
+2. For each person, choose Keep if they still need their access, or Remove to switch it off.
+3. You're done when everyone has a decision. It takes about a minute per person.
+
+WHAT HAPPENS NEXT
+
+Nobody's access changes until you decide: nothing is removed automatically. If it isn't finished by 15 Dec 2026, you'll get a weekly reminder.
+
+NOT SURE ABOUT SOMEONE?
+
+Keep their access and ask Oortcloud support at support@afiax.africa.
+
+Sent by Oortcloud, Oort Cloud Computing Limited, the company behind Afiax Connected Healthcare.
+Oortcloud will never ask for your password by email or phone.

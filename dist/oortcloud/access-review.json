@@ -1,0 +1,14 @@
+{
+  "subject": "{{#isOverdue}}Overdue: access review for {{reviewTitle}}{{/isOverdue}}{{^isOverdue}}Access review: {{undecidedCount}} people to check by {{dueOn}}{{/isOverdue}}",
+  "fields": {
+    "reviewTitle": "What is reviewed, e.g. \"Mama Pharmacy, 2026 Q4\".",
+    "undecidedCount": "People still without a decision.",
+    "dueOn": "Due date, e.g. 15 Dec 2026.",
+    "isOverdue": "true for the weekly overdue reminder.",
+    "reviewUrl": "Where the review is (portal for customers, console for staff).",
+    "reason": "Why this person reviews, e.g. \"you're Mama Pharmacy's administrator, and this is the quarterly check of who can open its Afiax services.\"",
+    "escalation": "Who sees overdue reviews, e.g. \"Oortcloud's security lead\".",
+    "securityContact": "Who to ask, e.g. \"Oortcloud's security lead\".",
+    "securityEmail": "Optional. Their email."
+  }
+}

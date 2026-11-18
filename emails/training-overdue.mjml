@@ -1,0 +1,59 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-include path="./partials/oortcloud-head.mjml" />
+    <mj-title>Required training overdue</mj-title>
+    <mj-preview>{{#isManager}}{{personName}} has overdue required training.{{/isManager}}{{^isManager}}Open each course straight from this email.{{/isManager}}</mj-preview>
+  </mj-head>
+
+  <mj-body background-color="#F1F5F9" width="600px">
+    <mj-include path="./partials/oortcloud-header.mjml" />
+
+    <mj-section background-color="#ffffff" padding="18px 32px 30px 32px">
+      <mj-column>
+        <mj-text mj-class="h1">{{#isManager}}{{personName}} has overdue training{{/isManager}}{{^isManager}}Your required training is overdue{{/isManager}}</mj-text>
+        <mj-text>
+          {{#isManager}}Hello {{managerName}}, {{personName}}'s required training below is overdue. You're getting this because you're their manager{{#forTenant}} or their organisation's administrator{{/forTenant}}.{{/isManager}}{{^isManager}}Hello {{personName}}, the required training below is overdue. It's required for your role: {{reason}}{{/isManager}}
+        </mj-text>
+
+        <mj-text padding="4px 0 18px 0">
+          <table class="em-details" role="presentation" cellpadding="0" cellspacing="0">
+            {{#courses}}
+            <tr><td class="v" style="font-weight:400;">
+              <strong>{{#url}}<a href="{{url}}">{{title}}</a>{{/url}}{{^url}}{{title}}{{/url}}</strong><br />
+              <span style="color:#64748B;">Was due {{dueOn}}{{#lessons}} · {{lessons}} lessons{{/lessons}}</span>
+            </td></tr>
+            {{/courses}}
+          </table>
+        </mj-text>
+
+        <mj-raw>{{^isManager}}</mj-raw>
+        <mj-text mj-class="h2">What to do</mj-text>
+        <mj-text>Open each course above and work through it in the Oortcloud Academy. Your progress is saved as you go, so you can stop and come back.</mj-text>
+        <mj-raw>{{#academyUrl}}</mj-raw>
+        <mj-button href="{{academyUrl}}">Open the Academy</mj-button>
+        <mj-raw>{{/academyUrl}}</mj-raw>
+        <mj-raw>{{/isManager}}</mj-raw>
+        <mj-raw>{{#isManager}}</mj-raw>
+        <mj-text mj-class="h2">What to do</mj-text>
+        <mj-text>Please make time for {{personName}} to finish it. Nothing else is needed from you.</mj-text>
+        <mj-raw>{{/isManager}}</mj-raw>
+
+        <mj-text mj-class="h2">What happens next</mj-text>
+        <mj-text>
+          Reminders go out every week until it's done{{^isManager}}, and your manager gets a copy{{/isManager}}. Overdue training never blocks anyone's access.
+        </mj-text>
+
+        <mj-text padding="8px 0 0 0">
+          <table class="em-help" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td>
+              <strong style="color:#1B2A4A;">Questions about the training?</strong><br />
+              Email <a href="mailto:{{trainingContact}}">{{trainingContact}}</a>.
+            </td></tr>
+          </table>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./partials/oortcloud-footer.mjml" />
+  </mj-body>
+</mjml>

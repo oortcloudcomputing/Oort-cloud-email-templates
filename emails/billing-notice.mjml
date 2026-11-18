@@ -1,0 +1,68 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-include path="./partials/oortcloud-head.mjml" />
+    <mj-title>{{subject}}</mj-title>
+    <mj-preview>{{preview}}</mj-preview>
+  </mj-head>
+
+  <mj-body background-color="#F1F5F9" width="600px">
+    <mj-include path="./partials/oortcloud-header.mjml" />
+
+    <mj-section background-color="#ffffff" padding="18px 32px 30px 32px">
+      <mj-column>
+
+        <!-- 1. What happened, 2. why me -->
+        <mj-text mj-class="h1">{{headline}}</mj-text>
+        <mj-text>Hello {{adminName}},</mj-text>
+        <mj-text>{{message}}</mj-text>
+        <mj-text>You're getting this because you're {{organisationName}}'s administrator on Oortcloud.</mj-text>
+
+        <!-- 4. Facts to find later -->
+        <mj-raw>{{#invoiceNumber}}</mj-raw>
+        <mj-text padding="4px 0 22px 0">
+          <table class="em-details" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td class="k">Invoice</td><td class="v">{{invoiceNumber}}</td></tr>
+            {{#amount}}<tr><td class="k">Amount due</td><td class="v">KES {{amount}}</td></tr>{{/amount}}
+            {{#dueDate}}<tr><td class="k">Due</td><td class="v">{{dueDate}}</td></tr>{{/dueDate}}
+            <tr><td class="k" style="border-bottom:0;">Organisation</td><td class="v" style="border-bottom:0;">{{organisationName}}</td></tr>
+          </table>
+        </mj-text>
+        <mj-raw>{{/invoiceNumber}}</mj-raw>
+
+        <!-- 3. What to do now: exact payment details -->
+        <mj-raw>{{#showPay}}</mj-raw>
+        <mj-text mj-class="h2">How to pay</mj-text>
+        <mj-raw>{{#mpesaPaybill}}</mj-raw>
+        <mj-text>
+          <strong style="color:#1B2A4A;">M-Pesa:</strong> Lipa na M-Pesa, Pay Bill, business number <strong>{{mpesaPaybill}}</strong>, account number <strong>{{mpesaAccount}}</strong>{{#amount}}, amount KES {{amount}}{{/amount}}. It's matched to your bill automatically.
+        </mj-text>
+        <mj-raw>{{/mpesaPaybill}}</mj-raw>
+        <mj-text>
+          <strong style="color:#1B2A4A;">M-Pesa prompt or card:</strong> open Bills and payments in your portal and choose Pay.
+        </mj-text>
+        <mj-button href="{{billingUrl}}">Open bills and payments</mj-button>
+        <mj-raw>{{/showPay}}</mj-raw>
+
+        <!-- 5. What happens next -->
+        <mj-raw>{{#next}}</mj-raw>
+        <mj-text mj-class="h2">What happens next</mj-text>
+        <mj-text>{{next}}</mj-text>
+        <mj-raw>{{/next}}</mj-raw>
+
+        <!-- 6. Help -->
+        <mj-text padding="8px 0 0 0">
+          <table class="em-help" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td>
+              <strong style="color:#1B2A4A;">Questions about your bill?</strong><br />
+              Email Oortcloud at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a> and quote {{#invoiceNumber}}{{invoiceNumber}}{{/invoiceNumber}}{{^invoiceNumber}}{{tenantId}}{{/invoiceNumber}}.
+              {{#showPay}}<br />Already paid? Thank you, you can ignore this. Payments can take a few minutes to show in the portal.{{/showPay}}
+            </td></tr>
+          </table>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./partials/oortcloud-footer.mjml" />
+  </mj-body>
+</mjml>

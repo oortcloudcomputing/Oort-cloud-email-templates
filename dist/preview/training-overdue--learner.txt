@@ -1,0 +1,24 @@
+Subject: Reminder: 1 required course overdue
+
+Your required training is overdue
+
+Hello Brian Otieno, the required training below is overdue. It's required for your role: it's required for every Oortcloud engineer.
+
+  Health Data Privacy and Security, was due 12 Nov 2026 (8 lessons)
+  https://academy.afiax.africa/lms/courses/health-data-privacy
+
+WHAT TO DO
+
+Open each course above and work through it in the Oortcloud Academy. Your progress is saved as you go, so you can stop and come back.
+Academy: https://academy.afiax.africa/lms
+
+WHAT HAPPENS NEXT
+
+Reminders go out every week until it's done, and your manager gets a copy. Overdue training never blocks anyone's access.
+
+QUESTIONS ABOUT THE TRAINING?
+
+Email training@afiax.africa.
+
+Sent by Oortcloud, Oort Cloud Computing Limited, the company behind Afiax Connected Healthcare.
+Oortcloud will never ask for your password by email or phone.
