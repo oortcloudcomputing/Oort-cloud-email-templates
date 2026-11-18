@@ -1,0 +1,42 @@
+Subject: Security alert: emergency access used at Nairobi West Clinic
+
+Emergency access was used
+
+Dr Peter Mwangi used emergency ("break-glass") access to open a patient record at Nairobi West Clinic. Emergency access lets a clinician see a record they normally can't, and every use must be reviewed.
+
+You're getting this because this address is the security alert contact for Nairobi West Clinic.
+
+  Organisation:  Nairobi West Clinic
+  Used by:       Dr Peter Mwangi
+  Started:       19 Nov 2026, 02:14 EAT
+  Access ends:   19 Nov 2026, 06:14 EAT (4 hours)
+  REVIEW BY:     20 Nov 2026, 02:14 EAT
+  Reference:     bg-7f3a91c2
+
+The patient's name and the reason given are left out of this email to protect the patient's privacy. You'll see both in Afiax.
+
+HOW TO REVIEW IT
+
+1. Open the emergency access record in Afiax. It shows the patient, the
+   reason given and the times:
+   https://app.afiax.africa/Flag/0c1d2e3f-4a5b-6c7d-8e9f-0a1b2c3d4e5f
+
+2. Check it was a real emergency and that the reason given matches the
+   patient's record.
+
+3. If it wasn't justified, end the access now by changing the record's
+   status to Inactive. Access stops straight away.
+
+4. Write down the outcome of your review in the patient's record.
+
+WHAT HAPPENS NEXT
+
+If no one ends it, the access stops by itself at 19 Nov 2026, 06:14 EAT. This use is already recorded in the audit log.
+
+IF THIS LOOKS LIKE MISUSE
+
+End the access (step 3) and tell your Data Protection Officer straight away. For help, contact Afiax support at support@afiax.africa and quote reference bg-7f3a91c2.
+
+--
+Sent by Afiax Connected Healthcare, a service of Oort Cloud Computing Limited.
+Afiax will never ask for your password by email or phone.

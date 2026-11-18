@@ -1,0 +1,32 @@
+{
+  "brand": "afiax",
+  "subject": "Confirm your new Afiax sign-in email",
+  "fields": {
+    "firstName": "Optional. Account holder's first name.",
+    "newEmail": "The new sign-in address (this email goes to it).",
+    "oldEmailMasked": "The previous address, partly hidden, e.g. ak***@example.co.ke.",
+    "changedByName": "Optional. Name of the administrator who made the change.",
+    "projectName": "Optional. The administrator's organisation.",
+    "changedAt": "When it changed, e.g. 19 Nov 2026, 14:05 EAT.",
+    "verifyUrl": "Single-use confirmation link.",
+    "signInUrl": "Full sign-in address.",
+    "signInHost": "Sign-in address without https:// for display.",
+    "oldNotified": "true when a notice was also sent to the previous address.",
+    "supportEmail": "Afiax support address."
+  },
+  "samples": {
+    "by-admin": {
+      "firstName": "Akinyi",
+      "newEmail": "akinyi@nwclinic.co.ke",
+      "oldEmailMasked": "ak***@gmail.com",
+      "changedByName": "Jane Wanjiku",
+      "projectName": "Nairobi West Clinic",
+      "changedAt": "19 Nov 2026, 14:05 EAT",
+      "verifyUrl": "https://app.afiax.africa/verifyemail/9f1c2b7e-0d5a-4c1b-8a3e-2f6d7c8b9a01/3b9e1f0c7a2d4e6f",
+      "signInUrl": "https://app.afiax.africa/signin",
+      "signInHost": "app.afiax.africa/signin",
+      "oldNotified": true,
+      "supportEmail": "support@afiax.africa"
+    }
+  }
+}

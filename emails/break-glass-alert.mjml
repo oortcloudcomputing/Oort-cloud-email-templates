@@ -1,0 +1,82 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-include path="./partials/afiax-head.mjml" />
+    <mj-title>Security alert: emergency access used at {{projectName}}</mj-title>
+    <mj-preview>{{declaredByName}} opened a patient record with emergency access. Review it by {{reviewBy}}.</mj-preview>
+  </mj-head>
+
+  <mj-body background-color="#F1F5F9" width="600px">
+    <mj-include path="./partials/afiax-header.mjml" />
+
+    <mj-section background-color="#ffffff" padding="18px 32px 30px 32px">
+      <mj-column>
+        {{! No patient name, ID or reason in this email: they are clinical information. The reviewer reads them in Afiax. }}
+
+        <mj-text mj-class="h1">Emergency access was used</mj-text>
+        <mj-text>
+          <strong style="color:#1B2A4A;">{{declaredByName}}</strong> used emergency ("break-glass") access to open a patient record at {{projectName}}. Emergency access lets a clinician see a record they normally can't, and every use must be reviewed.
+        </mj-text>
+        <mj-text>
+          You're getting this because this address is the security alert contact for {{projectName}}.
+        </mj-text>
+
+        <mj-text padding="4px 0 22px 0">
+          <table class="em-details" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td class="k">Organisation</td><td class="v">{{projectName}}</td></tr>
+            <tr><td class="k">Used by</td><td class="v">{{declaredByName}}</td></tr>
+            <tr><td class="k">Started</td><td class="v">{{declaredAt}}</td></tr>
+            <tr><td class="k">Access ends</td><td class="v">{{expiresAt}} ({{durationHours}} hours)</td></tr>
+            <tr><td class="k"><strong>Review by</strong></td><td class="v"><strong>{{reviewBy}}</strong></td></tr>
+            <tr><td class="k" style="border-bottom:0;">Reference</td><td class="v" style="border-bottom:0;">{{correlationId}}</td></tr>
+          </table>
+        </mj-text>
+
+        <mj-text mj-class="small" padding="0 0 18px 0">
+          The patient's name and the reason given are left out of this email to protect the patient's privacy. You'll see both in Afiax.
+        </mj-text>
+
+        <mj-text mj-class="h2">How to review it</mj-text>
+        <mj-raw>{{#reviewUrl}}</mj-raw>
+        <mj-text padding="0 0 4px 0">
+          <strong style="color:#1B2A4A;">1. Open the emergency access record</strong> in Afiax. It shows the patient, the reason given and the times.
+        </mj-text>
+        <mj-button href="{{reviewUrl}}">Review in Afiax</mj-button>
+        <mj-text mj-class="small" padding="0 0 18px 0">
+          If the button doesn't work, copy this link into your browser:<br /><span class="em-url">{{reviewUrl}}</span>
+        </mj-text>
+        <mj-raw>{{/reviewUrl}}</mj-raw>
+        <mj-raw>{{^reviewUrl}}</mj-raw>
+        <mj-text>
+          <strong style="color:#1B2A4A;">1. Find the emergency access record</strong> in Afiax: search the patient's flags or the audit log for reference {{correlationId}}.
+        </mj-text>
+        <mj-raw>{{/reviewUrl}}</mj-raw>
+        <mj-text>
+          <strong style="color:#1B2A4A;">2. Check it was a real emergency</strong> and that the reason given matches the patient's record.
+        </mj-text>
+        <mj-text>
+          <strong style="color:#1B2A4A;">3. If it wasn't justified, end the access now</strong> by changing the record's status to <strong>Inactive</strong>. Access stops straight away.
+        </mj-text>
+        <mj-text>
+          <strong style="color:#1B2A4A;">4. Write down the outcome</strong> of your review in the patient's record.
+        </mj-text>
+
+        <mj-text mj-class="h2">What happens next</mj-text>
+        <mj-text>
+          If no one ends it, the access stops by itself at {{expiresAt}}. This use is already recorded in the audit log.
+        </mj-text>
+
+        <mj-text padding="8px 0 18px 0">
+          <table class="em-warn" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td>
+              <strong style="color:#1B2A4A;">If this looks like misuse</strong><br />
+              End the access (step 3) and tell your Data Protection Officer straight away. For help, contact Afiax support at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a> and quote reference {{correlationId}}.
+            </td></tr>
+          </table>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./partials/afiax-footer.mjml" />
+  </mj-body>
+</mjml>

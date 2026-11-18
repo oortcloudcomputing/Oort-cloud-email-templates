@@ -1,0 +1,32 @@
+Confirm your new sign-in email
+
+Hello{{#firstName}} {{firstName}}{{/firstName}},
+
+{{#changedByName}}{{changedByName}}, an administrator{{#projectName}} at {{projectName}}{{/projectName}},{{/changedByName}}{{^changedByName}}An administrator{{#projectName}} at {{projectName}}{{/projectName}}{{/changedByName}} changed the email address you use to sign in to Afiax. From now on you sign in with this address, {{newEmail}}.
+
+  New sign-in email:  {{newEmail}}
+  Previous email:     {{oldEmailMasked}}
+{{#changedByName}}
+  Changed by:         {{changedByName}}
+{{/changedByName}}
+  Changed at:         {{changedAt}}
+
+WHAT TO DO
+
+1. Confirm this address. Open this link:
+   {{verifyUrl}}
+   This tells Afiax that emails sent here really reach you, including
+   password-reset emails.
+
+2. Sign in with {{newEmail}} next time, at {{signInUrl}}.
+   Your password and two-step sign-in stay the same.
+
+WHAT HAPPENS NEXT
+
+Your previous address no longer works for signing in.{{#oldNotified}} We've sent a notice about this change to it too, in case the change wasn't expected.{{/oldNotified}} The confirmation link works once.
+
+NOT YOU?
+
+If you don't have an Afiax account, this may have been sent to the wrong address. Don't confirm it. Tell Afiax support at {{supportEmail}} so the account can be corrected.
+
+{{> footer}}

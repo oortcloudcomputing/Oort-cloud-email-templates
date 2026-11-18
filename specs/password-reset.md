@@ -30,9 +30,15 @@ Account (email) · Requested at · From (browser, if known)
 `email`, `resetUrl`, `requestedAt` (formatted, EAT), `userAgent` summary (optional),
 `signInUrl`, `supportEmail`.
 
+## Built (2026-11-19)
+
+- Shows the request time (EAT) and the browser (e.g. "Chrome on Android", from the
+  User-Agent).
+- Says, truthfully, that a new password doesn't sign out other devices, and points to the
+  Security page where sessions can be revoked.
+
 ## Gaps found in the code
 
 - Same as invite: the link never expires.
-- Request time and browser aren't passed to the email today.
 - Organisations that sign in through an external identity provider can't reset here
   (`isExternalAuth`). They currently get no email; consider telling them where to reset.

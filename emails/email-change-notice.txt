@@ -1,0 +1,22 @@
+Your sign-in email was changed
+
+Hello{{#firstName}} {{firstName}}{{/firstName}},
+
+{{#changedByName}}{{changedByName}}, an administrator{{#projectName}} at {{projectName}}{{/projectName}},{{/changedByName}}{{^changedByName}}An administrator{{#projectName}} at {{projectName}}{{/projectName}}{{/changedByName}} changed the email address for your Afiax account. You now sign in with {{newEmailMasked}}. This address no longer works for signing in.
+
+  New sign-in email:  {{newEmailMasked}}
+  Previous email:     this address
+{{#changedByName}}
+  Changed by:         {{changedByName}}
+{{/changedByName}}
+  Changed at:         {{changedAt}}
+
+IF YOU EXPECTED THIS
+
+You don't need to do anything. Sign in with your new address next time. Your password stays the same.
+
+IF YOU DIDN'T EXPECT THIS, ACT NOW
+
+Someone else may be able to receive your password-reset emails. Contact {{#changedByName}}{{changedByName}} or {{/changedByName}}Afiax support at {{supportEmail}} straight away. Tell them your name, this email address and the time above, and ask them to change the address back.
+
+{{> footer}}

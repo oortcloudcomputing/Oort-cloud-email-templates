@@ -1,0 +1,48 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-include path="./partials/afiax-head.mjml" />
+    <mj-title>Your Afiax sign-in email was changed</mj-title>
+    <mj-preview>You now sign in with {{newEmailMasked}}. If you didn't expect this, contact us now.</mj-preview>
+  </mj-head>
+
+  <mj-body background-color="#F1F5F9" width="600px">
+    <mj-include path="./partials/afiax-header.mjml" />
+
+    <mj-section background-color="#ffffff" padding="18px 32px 30px 32px">
+      <mj-column>
+
+        <mj-text mj-class="h1">Your sign-in email was changed</mj-text>
+        <mj-text>Hello{{#firstName}} {{firstName}}{{/firstName}},</mj-text>
+        <mj-text>
+          {{#changedByName}}{{changedByName}}, an administrator{{#projectName}} at {{projectName}}{{/projectName}},{{/changedByName}}{{^changedByName}}An administrator{{#projectName}} at {{projectName}}{{/projectName}}{{/changedByName}} changed the email address for your Afiax account. You now sign in with <strong style="color:#1B2A4A;">{{newEmailMasked}}</strong>. This address no longer works for signing in.
+        </mj-text>
+
+        <mj-text padding="4px 0 22px 0">
+          <table class="em-details" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td class="k">New sign-in email</td><td class="v">{{newEmailMasked}}</td></tr>
+            <tr><td class="k">Previous email</td><td class="v">this address</td></tr>
+            {{#changedByName}}<tr><td class="k">Changed by</td><td class="v">{{changedByName}}</td></tr>{{/changedByName}}
+            <tr><td class="k" style="border-bottom:0;">Changed at</td><td class="v" style="border-bottom:0;">{{changedAt}}</td></tr>
+          </table>
+        </mj-text>
+
+        <mj-text mj-class="h2">If you expected this</mj-text>
+        <mj-text>
+          You don't need to do anything. Sign in with your new address next time. Your password stays the same.
+        </mj-text>
+
+        <mj-text padding="8px 0 18px 0">
+          <table class="em-warn" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td>
+              <strong style="color:#1B2A4A;">If you didn't expect this, act now</strong><br />
+              Someone else may be able to receive your password-reset emails. Contact {{#changedByName}}{{changedByName}} or {{/changedByName}}Afiax support at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a> straight away. Tell them your name, this email address and the time above, and ask them to change the address back.
+            </td></tr>
+          </table>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./partials/afiax-footer.mjml" />
+  </mj-body>
+</mjml>

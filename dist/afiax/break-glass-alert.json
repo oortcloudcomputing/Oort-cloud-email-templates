@@ -1,0 +1,14 @@
+{
+  "subject": "Security alert: emergency access used at {{projectName}}",
+  "fields": {
+    "projectName": "The organisation.",
+    "declaredByName": "Name of the person who used emergency access.",
+    "declaredAt": "When it started, e.g. 19 Nov 2026, 14:05 EAT.",
+    "expiresAt": "When it ends by itself.",
+    "durationHours": "Length of the access in hours.",
+    "reviewBy": "Review deadline (24 hours after it started).",
+    "correlationId": "Reference that links the flag, audit event and this alert.",
+    "reviewUrl": "Optional. Link to the emergency access record (the Flag) in Afiax.",
+    "supportEmail": "Afiax support address."
+  }
+}

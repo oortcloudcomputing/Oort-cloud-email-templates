@@ -31,7 +31,15 @@ Organisation · Facility · Used by (name, role) · Time · Reason given · Revi
 `facilityName`, `organisationName`, `userName`, `userRole`, `accessedAt`, `reason`,
 `reviewBy`, `reviewUrl` (link to the AuditEvent or review screen, behind sign-in).
 
-## Gaps found in the code
+## Built (2026-11-19)
 
-- Patient name in subject: remove.
-- Check that a review screen exists to link to; if not, link to the AuditEvent.
+- The patient's name, ID and the reason are no longer in the subject or body. The reason is
+  free text a clinician writes, so it can hold clinical detail; the reviewer reads it in Afiax.
+- "Review in Afiax" links to the break-glass Flag in the admin app. Setting the Flag's status
+  to Inactive ends the access at once (`security-labels.ts` only honours active flags).
+- The review deadline is 24 hours after access starts.
+
+## Gaps
+
+- No dedicated review screen: reviewers use the Flag page in the admin app.
+- No escalation if no one reviews it by the deadline.

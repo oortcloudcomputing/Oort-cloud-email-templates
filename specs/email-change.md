@@ -32,7 +32,15 @@ Today only the new address gets an email.
 `oldEmailMasked`, `newEmailMasked`, `changedBy` (name, optional), `changedAt`,
 `verifyUrl`, `supportEmail`.
 
-## Gaps found in the code
+## Built (2026-11-19)
 
-- No notice is sent to the old address. Add it.
+- Only an administrator (or Afiax super admin) can change a sign-in email (`$update-email`),
+  so both emails name the administrator.
+- The new address works for signing in straight away; confirming only marks it verified. The
+  email says so and doesn't claim confirming is needed to sign in.
+- The notice to the old address goes out after the change is saved, best effort (a mail
+  failure is logged, not rolled back). It is also sent when verification is skipped.
+
+## Gaps
+
 - Verification links don't expire.

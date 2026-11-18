@@ -1,0 +1,23 @@
+Subject: Your Afiax sign-in email was changed
+
+Your sign-in email was changed
+
+Hello,
+
+An administrator changed the email address for your Afiax account. You now sign in with ak***@nwclinic.co.ke. This address no longer works for signing in.
+
+  New sign-in email:  ak***@nwclinic.co.ke
+  Previous email:     this address
+  Changed at:         19 Nov 2026, 14:05 EAT
+
+IF YOU EXPECTED THIS
+
+You don't need to do anything. Sign in with your new address next time. Your password stays the same.
+
+IF YOU DIDN'T EXPECT THIS, ACT NOW
+
+Someone else may be able to receive your password-reset emails. Contact Afiax support at support@afiax.africa straight away. Tell them your name, this email address and the time above, and ask them to change the address back.
+
+--
+Sent by Afiax Connected Healthcare, a service of Oort Cloud Computing Limited.
+Afiax will never ask for your password by email or phone.

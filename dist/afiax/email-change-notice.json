@@ -1,0 +1,11 @@
+{
+  "subject": "Your Afiax sign-in email was changed",
+  "fields": {
+    "firstName": "Optional. Account holder's first name.",
+    "newEmailMasked": "The new address, partly hidden, e.g. ak***@nwclinic.co.ke.",
+    "changedByName": "Optional. Name of the administrator who made the change.",
+    "projectName": "Optional. The administrator's organisation.",
+    "changedAt": "When it changed, e.g. 19 Nov 2026, 14:05 EAT.",
+    "supportEmail": "Afiax support address."
+  }
+}
