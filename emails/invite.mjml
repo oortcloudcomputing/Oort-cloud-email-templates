@@ -1,0 +1,102 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-include path="./partials/afiax-head.mjml" />
+    <mj-title>{{projectName}} on Afiax</mj-title>
+    <mj-preview>{{#newUser}}Set your password to get started. The link works once.{{/newUser}}{{^newUser}}Sign in as usual and choose {{projectName}}.{{/newUser}}</mj-preview>
+  </mj-head>
+
+  <mj-body background-color="#F1F5F9" width="600px">
+    <mj-include path="./partials/afiax-header.mjml" />
+
+    <mj-section background-color="#ffffff" padding="18px 32px 30px 32px">
+      <mj-column>
+
+        <!-- 1. What happened, 2. why me -->
+        <mj-text mj-class="h1">{{#newUser}}You're invited to {{projectName}}{{/newUser}}{{^newUser}}You now have access to {{projectName}}{{/newUser}}</mj-text>
+        <mj-text>
+          Hello {{firstName}},
+        </mj-text>
+        <mj-text>
+          {{#inviterName}}{{inviterName}} added you to {{projectName}} on Afiax{{/inviterName}}{{^inviterName}}{{projectName}} added you to its Afiax account{{/inviterName}}{{#isStaff}}, so you can work in Afiax with the rest of the team.{{/isStaff}}{{#isPatient}}, so you can see the health information they share with you.{{/isPatient}}{{#isCarer}}, so you can see information they share with you about the person you care for.{{/isCarer}}
+          {{^newUser}}You already have an Afiax account, so you'll use the same email address and password as before.{{/newUser}}
+        </mj-text>
+
+        <!-- 4. Facts to find later -->
+        <mj-text padding="4px 0 22px 0">
+          <table class="em-details" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td class="k">Organisation</td><td class="v">{{projectName}}</td></tr>
+            <tr><td class="k">Your role</td><td class="v">{{roleLabel}}</td></tr>
+            {{#inviterName}}<tr><td class="k">Invited by</td><td class="v">{{inviterName}}{{#inviterEmail}}<br /><a href="mailto:{{inviterEmail}}">{{inviterEmail}}</a>{{/inviterEmail}}</td></tr>{{/inviterName}}
+            <tr><td class="k">Your sign-in email</td><td class="v">{{email}}</td></tr>
+            <tr><td class="k" style="border-bottom:0;">Sign in at</td><td class="v" style="border-bottom:0;"><a href="{{signInUrl}}">{{signInHost}}</a></td></tr>
+          </table>
+        </mj-text>
+
+        <!-- 3. What to do now -->
+        <mj-text mj-class="h2">Getting started</mj-text>
+
+        <mj-raw>{{#newUser}}</mj-raw>
+        <mj-text padding="0 0 4px 0">
+          <strong style="color:#1B2A4A;">1. Create your password.</strong> Use the button below. Choose at least 8 characters. Afiax won't accept a password that has appeared in a known data leak.
+        </mj-text>
+        <mj-button href="{{setPasswordUrl}}">Create my password</mj-button>
+        <mj-text mj-class="small" padding="0 0 18px 0">
+          If the button doesn't work, copy this link into your browser:<br /><span class="em-url">{{setPasswordUrl}}</span>
+        </mj-text>
+        <mj-text>
+          <strong style="color:#1B2A4A;">2. Sign in</strong> at <a href="{{signInUrl}}">{{signInHost}}</a> with your email address, {{email}}, and your new password.
+        </mj-text>
+        <mj-raw>{{#mfaRequired}}</mj-raw>
+        <mj-text>
+          <strong style="color:#1B2A4A;">3. Set up two-step sign-in.</strong> Afiax will show you a code to scan with an authenticator app on your phone, such as Google Authenticator or Microsoft Authenticator. After that, each time you sign in you'll also type the 6-digit number the app shows.
+        </mj-text>
+        <mj-raw>{{/mfaRequired}}</mj-raw>
+        <mj-raw>{{/newUser}}</mj-raw>
+
+        <mj-raw>{{^newUser}}</mj-raw>
+        <mj-text padding="0 0 4px 0">
+          <strong style="color:#1B2A4A;">1. Sign in</strong> with your usual email address and password.
+        </mj-text>
+        <mj-button href="{{signInUrl}}">Sign in to Afiax</mj-button>
+        <mj-text mj-class="small" padding="0 0 18px 0">
+          If the button doesn't work, copy this link into your browser:<br /><span class="em-url">{{signInUrl}}</span>
+        </mj-text>
+        <mj-text>
+          <strong style="color:#1B2A4A;">2. Choose {{projectName}}</strong> from the list of organisations Afiax shows after you sign in.
+        </mj-text>
+        <mj-raw>{{/newUser}}</mj-raw>
+
+        <!-- 5. What happens next -->
+        <mj-text mj-class="h2">What happens next</mj-text>
+        <mj-text>
+          {{#isStaff}}You'll see {{projectName}}'s workspace. What you can see and change depends on your role, which {{#inviterName}}{{inviterName}}{{/inviterName}}{{^inviterName}}your administrator{{/inviterName}} set. If something you need is missing, ask them to change your access.{{/isStaff}}{{^isStaff}}You'll see the information {{projectName}} has chosen to share with you. If something looks wrong or is missing, contact {{projectName}} directly.{{/isStaff}}
+        </mj-text>
+        <mj-raw>{{#newUser}}</mj-raw>
+        <mj-text>
+          The password link works once. If it has already been used, or you lose this email, choose <strong>Forgot password</strong> on the sign-in page and Afiax will send you a new link.
+        </mj-text>
+        <mj-raw>{{/newUser}}</mj-raw>
+
+        <!-- 6. Help -->
+        <mj-text padding="8px 0 18px 0">
+          <table class="em-help" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td>
+              <strong style="color:#1B2A4A;">Need help?</strong><br />
+              Questions about your access or role: {{#inviterName}}ask {{inviterName}}{{#inviterEmail}} at <a href="mailto:{{inviterEmail}}">{{inviterEmail}}</a>{{/inviterEmail}}.{{/inviterName}}{{^inviterName}}contact {{projectName}}.{{/inviterName}}<br />
+              Trouble signing in: email Afiax support at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>.
+              {{#helpUrl}}<br /><a href="{{helpUrl}}">Read the getting-started guide</a>{{/helpUrl}}
+            </td></tr>
+          </table>
+        </mj-text>
+
+        <!-- Security note -->
+        <mj-text mj-class="small" padding="0">
+          Not expecting this? You can ignore this email. If you think it was sent to you by mistake, tell Afiax support at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>.
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./partials/afiax-footer.mjml" />
+  </mj-body>
+</mjml>

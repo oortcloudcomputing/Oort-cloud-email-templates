@@ -1,0 +1,10 @@
+<mj-section padding="22px 32px 36px 32px">
+  <mj-column>
+    <mj-text mj-class="small" align="center" padding="0 0 6px 0">
+      Sent by Afiax Connected Healthcare, a service of Oort Cloud Computing Limited.
+    </mj-text>
+    <mj-text mj-class="small" align="center" padding="0">
+      Afiax will never ask for your password by email or phone.
+    </mj-text>
+  </mj-column>
+</mj-section>

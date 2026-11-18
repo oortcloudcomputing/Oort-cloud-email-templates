@@ -1,0 +1,39 @@
+Subject: You're invited to Nairobi West Clinic on Afiax
+
+You're invited to Nairobi West Clinic
+
+Hello Baraka,
+
+Nairobi West Clinic added you to its Afiax account, so you can see the health information they share with you.
+
+  Organisation:        Nairobi West Clinic
+  Your role:           Patient
+  Your sign-in email:  baraka@example.com
+  Sign in at:          https://app.afiax.africa/signin
+
+GETTING STARTED
+
+1. Create your password. Open this link:
+   https://app.afiax.africa/setpassword/1a2b3c4d-0000-4c1b-8a3e-2f6d7c8b9a01/aa11bb22cc33dd44
+   Choose at least 8 characters. Afiax won't accept a password that has
+   appeared in a known data leak.
+
+2. Sign in at https://app.afiax.africa/signin with your email address, baraka@example.com,
+   and your new password.
+
+WHAT HAPPENS NEXT
+
+You'll see the information Nairobi West Clinic has chosen to share with you. If something looks wrong or is missing, contact Nairobi West Clinic directly.
+
+The password link works once. If it has already been used, or you lose this email, choose "Forgot password" on the sign-in page and Afiax will send you a new link.
+
+NEED HELP?
+
+Questions about your access or role: contact Nairobi West Clinic.
+Trouble signing in: email Afiax support at support@afiax.africa.
+
+Not expecting this? You can ignore this email. If you think it was sent to you by mistake, tell Afiax support at support@afiax.africa.
+
+--
+Sent by Afiax Connected Healthcare, a service of Oort Cloud Computing Limited.
+Afiax will never ask for your password by email or phone.

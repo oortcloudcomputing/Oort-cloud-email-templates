@@ -1,0 +1,72 @@
+{{#newUser}}
+You're invited to {{projectName}}
+{{/newUser}}
+{{^newUser}}
+You now have access to {{projectName}}
+{{/newUser}}
+
+Hello {{firstName}},
+
+{{#inviterName}}{{inviterName}} added you to {{projectName}} on Afiax{{/inviterName}}{{^inviterName}}{{projectName}} added you to its Afiax account{{/inviterName}}{{#isStaff}}, so you can work in Afiax with the rest of the team.{{/isStaff}}{{#isPatient}}, so you can see the health information they share with you.{{/isPatient}}{{#isCarer}}, so you can see information they share with you about the person you care for.{{/isCarer}}
+{{^newUser}}
+You already have an Afiax account, so you'll use the same email address and password as before.
+{{/newUser}}
+
+  Organisation:        {{projectName}}
+  Your role:           {{roleLabel}}
+{{#inviterName}}
+  Invited by:          {{inviterName}}{{#inviterEmail}} <{{inviterEmail}}>{{/inviterEmail}}
+{{/inviterName}}
+  Your sign-in email:  {{email}}
+  Sign in at:          {{signInUrl}}
+
+GETTING STARTED
+
+{{#newUser}}
+1. Create your password. Open this link:
+   {{setPasswordUrl}}
+   Choose at least 8 characters. Afiax won't accept a password that has
+   appeared in a known data leak.
+
+2. Sign in at {{signInUrl}} with your email address, {{email}},
+   and your new password.
+{{#mfaRequired}}
+
+3. Set up two-step sign-in. Afiax will show you a code to scan with an
+   authenticator app on your phone, such as Google Authenticator or
+   Microsoft Authenticator. After that, each time you sign in you'll also
+   type the 6-digit number the app shows.
+{{/mfaRequired}}
+{{/newUser}}
+{{^newUser}}
+1. Sign in with your usual email address and password:
+   {{signInUrl}}
+
+2. Choose {{projectName}} from the list of organisations Afiax shows after
+   you sign in.
+{{/newUser}}
+
+WHAT HAPPENS NEXT
+
+{{#isStaff}}
+You'll see {{projectName}}'s workspace. What you can see and change depends on your role, which {{#inviterName}}{{inviterName}}{{/inviterName}}{{^inviterName}}your administrator{{/inviterName}} set. If something you need is missing, ask them to change your access.
+{{/isStaff}}
+{{^isStaff}}
+You'll see the information {{projectName}} has chosen to share with you. If something looks wrong or is missing, contact {{projectName}} directly.
+{{/isStaff}}
+{{#newUser}}
+
+The password link works once. If it has already been used, or you lose this email, choose "Forgot password" on the sign-in page and Afiax will send you a new link.
+{{/newUser}}
+
+NEED HELP?
+
+Questions about your access or role: {{#inviterName}}ask {{inviterName}}{{#inviterEmail}} at {{inviterEmail}}{{/inviterEmail}}.{{/inviterName}}{{^inviterName}}contact {{projectName}}.{{/inviterName}}
+Trouble signing in: email Afiax support at {{supportEmail}}.
+{{#helpUrl}}
+Getting-started guide: {{helpUrl}}
+{{/helpUrl}}
+
+Not expecting this? You can ignore this email. If you think it was sent to you by mistake, tell Afiax support at {{supportEmail}}.
+
+{{> footer}}

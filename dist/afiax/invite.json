@@ -1,0 +1,21 @@
+{
+  "subject": "{{#newUser}}{{#inviterName}}{{inviterName}} invited you to {{projectName}} on Afiax{{/inviterName}}{{^inviterName}}You're invited to {{projectName}} on Afiax{{/inviterName}}{{/newUser}}{{^newUser}}You now have access to {{projectName}} on Afiax{{/newUser}}",
+  "fields": {
+    "firstName": "Recipient's first name.",
+    "email": "Recipient's email address (their sign-in name).",
+    "projectName": "Organisation they were added to.",
+    "roleLabel": "Plain-language role: Administrator, the access policy's name, or Staff member / Patient / Family member or carer.",
+    "inviterName": "Optional. Name of the person who sent the invite. Leave out for invites made by a bot or the provisioner.",
+    "inviterEmail": "Optional. Inviter's email.",
+    "newUser": "true when the account was just created and needs a password.",
+    "setPasswordUrl": "New users only. Single-use set-password link.",
+    "signInUrl": "Full sign-in address.",
+    "signInHost": "Sign-in address without https:// for display.",
+    "mfaRequired": "true when the account must use two-step sign-in.",
+    "isStaff": "true for Practitioner invites.",
+    "isPatient": "true for Patient invites.",
+    "isCarer": "true for RelatedPerson invites.",
+    "supportEmail": "Afiax support address.",
+    "helpUrl": "Optional. Getting-started guide."
+  }
+}

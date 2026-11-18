@@ -36,7 +36,7 @@ const DEAD_IE = [
   ],
 ];
 
-function stripDeadIE(html, file) {
+export function stripDeadIE(html, file) {
   for (const [needle, replacement] of DEAD_IE) {
     if (!html.includes(needle)) {
       throw new Error(

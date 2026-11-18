@@ -1,0 +1,63 @@
+{
+  "brand": "afiax",
+  "subject": "{{#newUser}}{{#inviterName}}{{inviterName}} invited you to {{projectName}} on Afiax{{/inviterName}}{{^inviterName}}You're invited to {{projectName}} on Afiax{{/inviterName}}{{/newUser}}{{^newUser}}You now have access to {{projectName}} on Afiax{{/newUser}}",
+  "fields": {
+    "firstName": "Recipient's first name.",
+    "email": "Recipient's email address (their sign-in name).",
+    "projectName": "Organisation they were added to.",
+    "roleLabel": "Plain-language role: Administrator, the access policy's name, or Staff member / Patient / Family member or carer.",
+    "inviterName": "Optional. Name of the person who sent the invite. Leave out for invites made by a bot or the provisioner.",
+    "inviterEmail": "Optional. Inviter's email.",
+    "newUser": "true when the account was just created and needs a password.",
+    "setPasswordUrl": "New users only. Single-use set-password link.",
+    "signInUrl": "Full sign-in address.",
+    "signInHost": "Sign-in address without https:// for display.",
+    "mfaRequired": "true when the account must use two-step sign-in.",
+    "isStaff": "true for Practitioner invites.",
+    "isPatient": "true for Patient invites.",
+    "isCarer": "true for RelatedPerson invites.",
+    "supportEmail": "Afiax support address.",
+    "helpUrl": "Optional. Getting-started guide."
+  },
+  "samples": {
+    "new-staff": {
+      "firstName": "Akinyi",
+      "email": "akinyi.otieno@example.co.ke",
+      "projectName": "Nairobi West Clinic",
+      "roleLabel": "Clinician",
+      "inviterName": "Jane Wanjiku",
+      "inviterEmail": "jane.wanjiku@example.co.ke",
+      "newUser": true,
+      "setPasswordUrl": "https://app.afiax.africa/setpassword/9f1c2b7e-0d5a-4c1b-8a3e-2f6d7c8b9a01/3b9e1f0c7a2d4e6f",
+      "signInUrl": "https://app.afiax.africa/signin",
+      "signInHost": "app.afiax.africa/signin",
+      "mfaRequired": true,
+      "isStaff": true,
+      "supportEmail": "support@afiax.africa"
+    },
+    "existing-staff": {
+      "firstName": "Akinyi",
+      "email": "akinyi.otieno@example.co.ke",
+      "projectName": "Kisumu Lakeside Hospital",
+      "roleLabel": "Administrator",
+      "inviterName": "Peter Mwangi",
+      "newUser": false,
+      "signInUrl": "https://app.afiax.africa/signin",
+      "signInHost": "app.afiax.africa/signin",
+      "isStaff": true,
+      "supportEmail": "support@afiax.africa"
+    },
+    "new-patient-no-inviter": {
+      "firstName": "Baraka",
+      "email": "baraka@example.com",
+      "projectName": "Nairobi West Clinic",
+      "roleLabel": "Patient",
+      "newUser": true,
+      "setPasswordUrl": "https://app.afiax.africa/setpassword/1a2b3c4d-0000-4c1b-8a3e-2f6d7c8b9a01/aa11bb22cc33dd44",
+      "signInUrl": "https://app.afiax.africa/signin",
+      "signInHost": "app.afiax.africa/signin",
+      "isPatient": true,
+      "supportEmail": "support@afiax.africa"
+    }
+  }
+}

@@ -93,3 +93,40 @@ Each existing template demonstrates a different layout vocabulary. When building
 - License: MIT (`LICENSE-MIT`).
 - Commits are short, imperative.
 - `node_modules/` is gitignored; **every `N/index.html` (build output) is committed** because that's the public deliverable consumed by colorlib.com and end users. After editing `src/N.mjml`, always commit the regenerated `N/index.html` alongside the source.
+
+## Afiax and Oortcloud emails (`emails/`)
+
+The Colorlib gallery above is upstream reference material. The emails our own apps send live
+in `emails/` and are built separately:
+
+```text
+CONTENT.md             # how to write our emails: the six questions, tone, privacy rules
+specs/                 # one spec per email (who gets it, what it must say, what data it needs)
+emails/
+├── partials/          # brand: afiax-head.mjml (fonts, colours, styles), header, footer (+ .txt)
+├── invite.mjml        # designed HTML version
+├── invite.txt         # plain-text version ({{> footer}} is replaced at build time)
+└── invite.json        # brand, subject, field descriptions, sample data for previews
+scripts/build-emails.mjs
+dist/                  # build output, committed: <brand>/, preview/, node/email-templates.ts
+```
+
+```bash
+npm run build:emails   # emails/* → dist/; open dist/preview/index.html to look at them
+```
+
+- Placeholders are a Mustache **subset**: `{{name}}`, `{{#name}}…{{/name}}`, `{{^name}}…{{/name}}`,
+  `{{! comment }}`. The build fails on anything else (partials, `{{{raw}}}`), because the Afiax
+  Clinical Suite server renders with its own small implementation
+  (`medplum/packages/server/src/email/templates.ts`).
+- Conditional blocks go **inside one column**: wrap them in `<mj-raw>{{#x}}</mj-raw>` …
+  `<mj-raw>{{/x}}</mj-raw>`. Never wrap whole `mj-section`s: MJML puts Outlook table glue
+  between sections, and removing a section would unbalance it.
+- Styles in `afiax-head.mjml` use `<mj-style inline="inline">` because mail goes out through our
+  own SMTP relay, which does not inline CSS.
+- **MJML 5 ignores `mj-include` unless `ignoreIncludes: false` is passed.** `build-emails.mjs` sets
+  it. `build.mjs` (the Colorlib gallery) does not, so `src/partials/base.mjml` is silently skipped
+  there; left as is because fixing it changes all 28 gallery outputs.
+- To ship a change to the Clinical Suite server: run the build, copy
+  `dist/node/email-templates.ts` to `medplum/packages/server/src/email/templates.generated.ts`, and
+  run that package's `src/email` and `src/admin/invite.test.ts` tests.

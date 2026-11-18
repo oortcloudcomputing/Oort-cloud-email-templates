@@ -1,3 +1,16 @@
+# Oortcloud email templates
+
+This repository holds the emails Afiax and Oortcloud apps send, and the Colorlib template
+gallery they started from.
+
+- **Writing or changing an email:** read [CONTENT.md](CONTENT.md), then the email's spec in
+  [specs/](specs/). Sources are in [emails/](emails/); build with `npm run build:emails` and
+  look at `dist/preview/index.html`.
+- **The Colorlib gallery** below is upstream reference material (MIT licence, kept in
+  `LICENSE-MIT`).
+
+---
+
 # Free Email Templates by Colorlib
 
 Free, responsive HTML email templates for Mailchimp and every other email service.

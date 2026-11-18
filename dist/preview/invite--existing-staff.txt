@@ -1,0 +1,37 @@
+Subject: You now have access to Kisumu Lakeside Hospital on Afiax
+
+You now have access to Kisumu Lakeside Hospital
+
+Hello Akinyi,
+
+Peter Mwangi added you to Kisumu Lakeside Hospital on Afiax, so you can work in Afiax with the rest of the team.
+You already have an Afiax account, so you'll use the same email address and password as before.
+
+  Organisation:        Kisumu Lakeside Hospital
+  Your role:           Administrator
+  Invited by:          Peter Mwangi
+  Your sign-in email:  akinyi.otieno@example.co.ke
+  Sign in at:          https://app.afiax.africa/signin
+
+GETTING STARTED
+
+1. Sign in with your usual email address and password:
+   https://app.afiax.africa/signin
+
+2. Choose Kisumu Lakeside Hospital from the list of organisations Afiax shows after
+   you sign in.
+
+WHAT HAPPENS NEXT
+
+You'll see Kisumu Lakeside Hospital's workspace. What you can see and change depends on your role, which Peter Mwangi set. If something you need is missing, ask them to change your access.
+
+NEED HELP?
+
+Questions about your access or role: ask Peter Mwangi.
+Trouble signing in: email Afiax support at support@afiax.africa.
+
+Not expecting this? You can ignore this email. If you think it was sent to you by mistake, tell Afiax support at support@afiax.africa.
+
+--
+Sent by Afiax Connected Healthcare, a service of Oort Cloud Computing Limited.
+Afiax will never ask for your password by email or phone.
