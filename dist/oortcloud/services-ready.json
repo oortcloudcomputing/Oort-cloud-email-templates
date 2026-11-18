@@ -1,0 +1,15 @@
+{
+  "subject": "{{readyWhat}} for {{organisationName}} {{readyVerb}} ready",
+  "fields": {
+    "adminName": "The administrator's name.",
+    "adminEmail": "Their sign-in email.",
+    "organisationName": "The organisation.",
+    "readyWhat": "What just became ready, e.g. \"Afiax Pharmacy\" or \"Pharmacy and HR & Payroll\".",
+    "readyVerb": "\"is\" or \"are\", agreeing with readyWhat.",
+    "services": "List of {name, purpose, url, firstStep}: every service the organisation has.",
+    "portalUrl": "The Oortcloud portal.",
+    "trialEndsOn": "Optional. Trial end date while on a trial.",
+    "supportEmail": "Oortcloud support address.",
+    "helpUrl": "Optional. Getting-started guide."
+  }
+}

@@ -1,0 +1,37 @@
+Subject: Confirm your email to start your Oortcloud trial
+
+Confirm your email to start your trial
+
+Hello Jane Wanjiku,
+
+You signed up Mama Pharmacy for Oortcloud, and gave this address as the administrator's email. Confirm it and your 30-day free trial starts straight away.
+
+  Organisation:       Mama Pharmacy
+  Administrator:      jane@mamapharmacy.co.ke
+  Products:           Pharmacy; 
+  Free trial:         30 days, until 19 Dec 2026
+  This link expires:  20 Nov 2026, 14:05 EAT
+
+GETTING STARTED
+
+1. Confirm your email:
+https://account.afiax.africa/signup/confirm?token=EXAMPLE
+
+2. Set your password and security key. The page that opens sets up your organisation in a few seconds, then shows a button to do this. You'll sign in to every Oortcloud and Afiax service with this one account (Afiax IAM): a password plus an authenticator app, a passkey or a security key.
+
+3. Invite your team from your Oortcloud portal, when you're ready.
+
+WHAT HAPPENS NEXT
+
+Your portal is ready as soon as you confirm. Some services, such as your pharmacy, billing or finance system, take up to half an hour to set up: we'll email you when they're ready.
+
+The trial is free until 19 Dec 2026. Before it ends we'll remind you, and you can pay by M-Pesa or card from the portal. Nothing is charged without a bill you can see first.
+
+NEED HELP?
+
+Email Oortcloud support at support@afiax.africa.
+
+Didn't sign up? Ignore this email: nothing is created until the link is used, and it stops working at 20 Nov 2026, 14:05 EAT.
+
+Sent by Oortcloud, Oort Cloud Computing Limited, the company behind Afiax Connected Healthcare.
+Oortcloud will never ask for your password by email or phone.

@@ -1,0 +1,35 @@
+Confirm your email to start your trial
+
+Hello {{adminName}},
+
+You signed up {{organisationName}} for Oortcloud, and gave this address as the administrator's email. Confirm it and your {{trialDays}}-day free trial starts straight away.
+
+  Organisation:       {{organisationName}}
+  Administrator:      {{adminEmail}}
+  Products:           {{#products}}{{name}}; {{/products}}
+  Free trial:         {{trialDays}} days, until {{trialEndsOn}}
+  This link expires:  {{linkExpiresAt}}
+
+GETTING STARTED
+
+1. Confirm your email:
+{{confirmUrl}}
+
+2. Set your password and security key. The page that opens sets up your organisation in a few seconds, then shows a button to do this. You'll sign in to every Oortcloud and Afiax service with this one account (Afiax IAM): a password plus an authenticator app, a passkey or a security key.
+
+3. Invite your team from your Oortcloud portal, when you're ready.
+
+WHAT HAPPENS NEXT
+
+Your portal is ready as soon as you confirm. Some services, such as your pharmacy, billing or finance system, take up to half an hour to set up: we'll email you when they're ready.
+
+The trial is free until {{trialEndsOn}}. Before it ends we'll remind you, and you can pay by M-Pesa or card from the portal. Nothing is charged without a bill you can see first.
+
+NEED HELP?
+
+Email Oortcloud support at {{supportEmail}}.{{#helpUrl}}
+Getting-started guide: {{helpUrl}}{{/helpUrl}}
+
+Didn't sign up? Ignore this email: nothing is created until the link is used, and it stops working at {{linkExpiresAt}}.
+
+{{> footer}}

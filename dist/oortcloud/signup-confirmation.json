@@ -1,0 +1,15 @@
+{
+  "subject": "Confirm your email to start your Oortcloud trial",
+  "fields": {
+    "adminName": "The administrator's name from the signup form.",
+    "adminEmail": "The address being confirmed.",
+    "organisationName": "The organisation signing up.",
+    "products": "List of {name}: the products chosen.",
+    "trialDays": "Length of the free trial in days.",
+    "trialEndsOn": "Trial end date if confirmed today, e.g. 19 Dec 2026.",
+    "confirmUrl": "The single-use confirmation link.",
+    "linkExpiresAt": "When the link stops working (EAT), e.g. 20 Nov 2026, 14:05 EAT.",
+    "supportEmail": "Oortcloud support address.",
+    "helpUrl": "Optional. Getting-started guide."
+  }
+}

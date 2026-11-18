@@ -1,0 +1,21 @@
+{
+  "brand": "oortcloud",
+  "subject": "Setting up {{what}} needs a hand from Oortcloud",
+  "fields": {
+    "adminName": "The administrator's name.",
+    "organisationName": "The organisation.",
+    "what": "What did not finish, e.g. \"Afiax Pharmacy\".",
+    "others": "Optional. What does work besides the portal, e.g. \"Afiax EHR\".",
+    "tenantId": "The organisation ID, to quote to support.",
+    "supportEmail": "Oortcloud support address."
+  },
+  "samples": {
+    "pharmacy": {
+      "adminName": "Jane Wanjiku",
+      "organisationName": "Mama Pharmacy",
+      "what": "Afiax Pharmacy",
+      "tenantId": "mama-pharmacy",
+      "supportEmail": "support@afiax.africa"
+    }
+  }
+}

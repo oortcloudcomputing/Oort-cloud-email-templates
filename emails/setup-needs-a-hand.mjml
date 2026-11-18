@@ -1,0 +1,38 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-include path="./partials/oortcloud-head.mjml" />
+    <mj-title>Setting up {{what}} needs a hand from Oortcloud</mj-title>
+    <mj-preview>Oortcloud is on it. Everything else you have keeps working.</mj-preview>
+  </mj-head>
+
+  <mj-body background-color="#F1F5F9" width="600px">
+    <mj-include path="./partials/oortcloud-header.mjml" />
+
+    <mj-section background-color="#ffffff" padding="18px 32px 30px 32px">
+      <mj-column>
+        <mj-text mj-class="h1">We're finishing {{what}} for you</mj-text>
+        <mj-text>Hello {{adminName}},</mj-text>
+        <mj-text>
+          Setting up {{what}} for {{organisationName}} didn't finish on its own. Oortcloud's team has been told and is fixing it now. You don't need to do anything, and nothing you've entered is lost.
+        </mj-text>
+        <mj-text>
+          Everything else you have keeps working: your portal{{#others}} and {{others}}{{/others}}. In the portal, {{what}} shows as "Needs Oortcloud" until it's ready.
+        </mj-text>
+        <mj-text mj-class="h2">What happens next</mj-text>
+        <mj-text>
+          We'll email you as soon as {{what}} is ready, usually the same working day. If you need it urgently, reply to support and quote your organisation ID, {{tenantId}}.
+        </mj-text>
+        <mj-text padding="8px 0 0 0">
+          <table class="em-help" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td>
+              <strong style="color:#1B2A4A;">Questions?</strong><br />
+              Email Oortcloud support at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a> and quote {{tenantId}}.
+            </td></tr>
+          </table>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./partials/oortcloud-footer.mjml" />
+  </mj-body>
+</mjml>

@@ -1,0 +1,67 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-include path="./partials/oortcloud-head.mjml" />
+    <mj-title>{{organisationName}} is ready on Oortcloud</mj-title>
+    <mj-preview>Your services are set up. Here's where to start.</mj-preview>
+  </mj-head>
+
+  <mj-body background-color="#F1F5F9" width="600px">
+    <mj-include path="./partials/oortcloud-header.mjml" />
+
+    <mj-section background-color="#ffffff" padding="18px 32px 30px 32px">
+      <mj-column>
+
+        <!-- 1. What happened, 2. why me -->
+        <mj-text mj-class="h1">Everything is ready</mj-text>
+        <mj-text>Hello {{adminName}},</mj-text>
+        <mj-text>
+          {{readyWhat}} for {{organisationName}} {{readyVerb}} set up and ready to use. You're getting this because you're {{organisationName}}'s administrator on Oortcloud.
+        </mj-text>
+
+        <!-- 3. What to do now: one row per service -->
+        <mj-text mj-class="h2">Where to start</mj-text>
+        <mj-text padding="4px 0 18px 0">
+          <table class="em-details" role="presentation" cellpadding="0" cellspacing="0">
+            {{#services}}
+            <tr><td class="v" style="font-weight:400;">
+              <strong>{{name}}</strong>{{#purpose}}: {{purpose}}{{/purpose}}<br />
+              <a href="{{url}}">{{url}}</a>
+              {{#firstStep}}<br /><span style="color:#64748B;">First: {{firstStep}}</span>{{/firstStep}}
+            </td></tr>
+            {{/services}}
+          </table>
+        </mj-text>
+        <mj-button href="{{portalUrl}}">Open my Oortcloud portal</mj-button>
+
+        <!-- 4. What you need -->
+        <mj-text mj-class="h2">Signing in</mj-text>
+        <mj-text>
+          Every service uses the same account: choose <strong>Sign in with Afiax IAM</strong> and use {{adminEmail}} with your password and security key. There's no separate password for each service.
+        </mj-text>
+        <mj-text>
+          Then invite your team from the portal's People page: each person gets one email to set up their own sign-in.
+        </mj-text>
+
+        <!-- 5. What happens next -->
+        <mj-text mj-class="h2">What happens next</mj-text>
+        <mj-text>
+          {{#trialEndsOn}}Your free trial runs until {{trialEndsOn}}. We'll remind you before it ends, and you can pay by M-Pesa or card from the portal.{{/trialEndsOn}}{{^trialEndsOn}}Your subscription carries on as usual; your bills are in the portal.{{/trialEndsOn}}
+        </mj-text>
+
+        <!-- 6. Help -->
+        <mj-text padding="8px 0 0 0">
+          <table class="em-help" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td>
+              <strong style="color:#1B2A4A;">Need help?</strong><br />
+              Email Oortcloud support at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>.
+              {{#helpUrl}}<br /><a href="{{helpUrl}}">Read the getting-started guide</a>{{/helpUrl}}
+            </td></tr>
+          </table>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./partials/oortcloud-footer.mjml" />
+  </mj-body>
+</mjml>

@@ -1,0 +1,32 @@
+Subject: Afiax Pharmacy for Mama Pharmacy is ready
+
+Everything is ready
+
+Hello Jane Wanjiku,
+
+Afiax Pharmacy for Mama Pharmacy is set up and ready to use. You're getting this because you're Mama Pharmacy's administrator on Oortcloud.
+
+WHERE TO START
+
+Afiax Pharmacy: sell, stock with batches and expiry, buy and report
+  https://mama-pharmacy.finance.afiax.africa
+  First: receive your opening stock, then open the point of sale
+
+Your Oortcloud portal: https://account.afiax.africa/portal
+
+SIGNING IN
+
+Every service uses the same account: choose "Sign in with Afiax IAM" and use jane@mamapharmacy.co.ke with your password and security key. There's no separate password for each service.
+
+Then invite your team from the portal's People page: each person gets one email to set up their own sign-in.
+
+WHAT HAPPENS NEXT
+
+Your free trial runs until 19 Dec 2026. We'll remind you before it ends, and you can pay by M-Pesa or card from the portal.
+
+NEED HELP?
+
+Email Oortcloud support at support@afiax.africa.
+
+Sent by Oortcloud, Oort Cloud Computing Limited, the company behind Afiax Connected Healthcare.
+Oortcloud will never ask for your password by email or phone.

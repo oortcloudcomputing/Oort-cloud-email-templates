@@ -1,0 +1,17 @@
+We're finishing {{what}} for you
+
+Hello {{adminName}},
+
+Setting up {{what}} for {{organisationName}} didn't finish on its own. Oortcloud's team has been told and is fixing it now. You don't need to do anything, and nothing you've entered is lost.
+
+Everything else you have keeps working: your portal{{#others}} and {{others}}{{/others}}. In the portal, {{what}} shows as "Needs Oortcloud" until it's ready.
+
+WHAT HAPPENS NEXT
+
+We'll email you as soon as {{what}} is ready, usually the same working day. If you need it urgently, reply to support and quote your organisation ID, {{tenantId}}.
+
+QUESTIONS?
+
+Email Oortcloud support at {{supportEmail}} and quote {{tenantId}}.
+
+{{> footer}}

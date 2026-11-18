@@ -1,0 +1,35 @@
+Everything is ready
+
+Hello {{adminName}},
+
+{{readyWhat}} for {{organisationName}} {{readyVerb}} set up and ready to use. You're getting this because you're {{organisationName}}'s administrator on Oortcloud.
+
+WHERE TO START
+
+{{#services}}
+{{name}}{{#purpose}}: {{purpose}}{{/purpose}}
+  {{url}}
+{{#firstStep}}
+  First: {{firstStep}}
+{{/firstStep}}
+
+{{/services}}
+Your Oortcloud portal: {{portalUrl}}
+
+SIGNING IN
+
+Every service uses the same account: choose "Sign in with Afiax IAM" and use {{adminEmail}} with your password and security key. There's no separate password for each service.
+
+Then invite your team from the portal's People page: each person gets one email to set up their own sign-in.
+
+WHAT HAPPENS NEXT
+
+{{#trialEndsOn}}Your free trial runs until {{trialEndsOn}}. We'll remind you before it ends, and you can pay by M-Pesa or card from the portal.{{/trialEndsOn}}{{^trialEndsOn}}Your subscription carries on as usual; your bills are in the portal.{{/trialEndsOn}}
+
+NEED HELP?
+
+Email Oortcloud support at {{supportEmail}}.{{#helpUrl}}
+Getting-started guide: {{helpUrl}}{{/helpUrl}}
+
+Sent by Oortcloud, Oort Cloud Computing Limited, the company behind Afiax Connected Healthcare.
+Oortcloud will never ask for your password by email or phone.

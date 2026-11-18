@@ -12,12 +12,15 @@ supply. Write or update the spec first, then the template.
 | Emergency access (break-glass) alert | Afiax Clinical Suite, Kenya | [break-glass-alert.md](break-glass-alert.md) | [emails/break-glass-alert](../emails/break-glass-alert.mjml) | **Built** |
 | Outbreak alert | Afiax Clinical Suite, Kenya | [outbreak-alert.md](outbreak-alert.md) | [emails/outbreak-alert](../emails/outbreak-alert.mjml) | **Built** |
 | IDSR immediate notification | Afiax Clinical Suite, Kenya | [idsr-immediate.md](idsr-immediate.md) | [emails/idsr-immediate](../emails/idsr-immediate.mjml) | **Built** |
-| Signup confirmation | Oortcloud Console | [signup-confirmation.md](signup-confirmation.md) | | Spec |
-| Services ready | Oortcloud Console | [services-ready.md](services-ready.md) | | Spec |
-| Setup needs a hand (provisioning failed) | Oortcloud Console (`provisioning.py` `notify_failed`) | to write | | Not yet specced |
+| Signup confirmation | Oortcloud Console | [signup-confirmation.md](signup-confirmation.md) | [emails/signup-confirmation](../emails/signup-confirmation.mjml) | **Built** |
+| Services ready | Oortcloud Console | [services-ready.md](services-ready.md) | [emails/services-ready](../emails/services-ready.mjml) | **Built** |
+| Setup needs a hand (provisioning failed) | Oortcloud Console (`provisioning.py` `notify_failed`) | (in the template's .json) | [emails/setup-needs-a-hand](../emails/setup-needs-a-hand.mjml) | **Built** |
 | Billing notices | Oortcloud Console | [billing-notice.md](billing-notice.md) | | Spec |
 | Access review due or overdue | Oortcloud Console | [access-review.md](access-review.md) | | Spec |
 | Training overdue | Oortcloud Console | [training-overdue.md](training-overdue.md) | | Spec |
+
+The console renders the `oortcloud` brand from `dist/python/oortcloud-email-templates.json`
+(copied to oortcloud_console/email_templates.json) with the same Mustache subset as Afiax FHIR.
 
 Not covered yet: Afiax IAM (Zitadel) sign-in and verification emails, Zulip notifications,
 and the built-in Frappe notifications on client Finance, HR and Academy sites.

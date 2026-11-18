@@ -2,6 +2,7 @@
 //
 //   dist/<brand>/<name>.html|.txt|.json   compiled templates, {{placeholders}} intact
 //   dist/preview/<name>--<sample>.html|.txt  filled with each sample, for looking at
+//   dist/python/oortcloud-email-templates.json  the Oortcloud brand's templates for the console
 //   dist/node/email-templates.ts          all templates as one TypeScript module for the
 //                                         Afiax Clinical Suite server
 //
@@ -76,11 +77,13 @@ async function buildEmail(file) {
   }
 
   console.log(`  ${file} -> dist/${brand}/${name}.html (+ ${previews.length} preview${previews.length === 1 ? '' : 's'})`);
-  return { name, subject: meta.subject, html, text, previews };
+  return { name, brand, subject: meta.subject, html, text, previews };
 }
 
 function writeNodeModule(built) {
+  // Afiax FHIR sends only the Afiax brand's emails
   const entries = built
+    .filter((b) => b.brand === 'afiax')
     .map(
       (b) =>
         `  ${JSON.stringify(b.name)}: {\n` +
@@ -104,6 +107,19 @@ export type EmailTemplateName = keyof typeof emailTemplates;
   writeFileSync(join(distDir, 'node', 'email-templates.ts'), source);
 }
 
+// The Oortcloud Console (Frappe, Python) renders the same templates with the same Mustache subset
+// (oortcloud_console/emails.py): one JSON file, copied into that repository.
+function writePythonData(built, brand) {
+  const data = Object.fromEntries(
+    built.filter((b) => b.brand === brand).map((b) => [b.name, { subject: b.subject, html: b.html, text: b.text }])
+  );
+  mkdirSync(join(distDir, 'python'), { recursive: true });
+  writeFileSync(
+    join(distDir, 'python', `${brand}-email-templates.json`),
+    JSON.stringify({ _generated: 'oortcloud-email-templates (npm run build:emails). Do not edit by hand.', templates: data }, null, 1) + '\n'
+  );
+}
+
 function writePreviewIndex(built) {
   const items = built
     .flatMap((b) => b.previews)
@@ -122,6 +138,7 @@ export async function buildEmails() {
   const built = [];
   for (const file of files) built.push(await buildEmail(file));
   writeNodeModule(built);
+  writePythonData(built, 'oortcloud');
   writePreviewIndex(built);
   console.log('Done. Previews: dist/preview/index.html');
 }

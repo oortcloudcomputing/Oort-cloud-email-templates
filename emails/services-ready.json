@@ -1,0 +1,31 @@
+{
+  "brand": "oortcloud",
+  "subject": "{{readyWhat}} for {{organisationName}} {{readyVerb}} ready",
+  "fields": {
+    "adminName": "The administrator's name.",
+    "adminEmail": "Their sign-in email.",
+    "organisationName": "The organisation.",
+    "readyWhat": "What just became ready, e.g. \"Afiax Pharmacy\" or \"Pharmacy and HR & Payroll\".",
+    "readyVerb": "\"is\" or \"are\", agreeing with readyWhat.",
+    "services": "List of {name, purpose, url, firstStep}: every service the organisation has.",
+    "portalUrl": "The Oortcloud portal.",
+    "trialEndsOn": "Optional. Trial end date while on a trial.",
+    "supportEmail": "Oortcloud support address.",
+    "helpUrl": "Optional. Getting-started guide."
+  },
+  "samples": {
+    "pharmacy": {
+      "adminName": "Jane Wanjiku",
+      "adminEmail": "jane@mamapharmacy.co.ke",
+      "organisationName": "Mama Pharmacy",
+      "readyWhat": "Afiax Pharmacy",
+      "readyVerb": "is",
+      "services": [
+        { "name": "Afiax Pharmacy", "purpose": "sell, stock with batches and expiry, buy and report", "url": "https://mama-pharmacy.finance.afiax.africa", "firstStep": "receive your opening stock, then open the point of sale" }
+      ],
+      "portalUrl": "https://account.afiax.africa/portal",
+      "trialEndsOn": "19 Dec 2026",
+      "supportEmail": "support@afiax.africa"
+    }
+  }
+}

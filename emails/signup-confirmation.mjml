@@ -1,0 +1,77 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-include path="./partials/oortcloud-head.mjml" />
+    <mj-title>Confirm your email to start your Oortcloud trial</mj-title>
+    <mj-preview>One click and {{organisationName}}'s {{trialDays}}-day free trial starts.</mj-preview>
+  </mj-head>
+
+  <mj-body background-color="#F1F5F9" width="600px">
+    <mj-include path="./partials/oortcloud-header.mjml" />
+
+    <mj-section background-color="#ffffff" padding="18px 32px 30px 32px">
+      <mj-column>
+
+        <!-- 1. What happened, 2. why me -->
+        <mj-text mj-class="h1">Confirm your email to start your trial</mj-text>
+        <mj-text>Hello {{adminName}},</mj-text>
+        <mj-text>
+          You signed up {{organisationName}} for Oortcloud, and gave this address as the administrator's email. Confirm it and your {{trialDays}}-day free trial starts straight away.
+        </mj-text>
+
+        <!-- 4. Facts to find later -->
+        <mj-text padding="4px 0 22px 0">
+          <table class="em-details" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td class="k">Organisation</td><td class="v">{{organisationName}}</td></tr>
+            <tr><td class="k">Administrator</td><td class="v">{{adminEmail}}</td></tr>
+            <tr><td class="k">Products</td><td class="v">{{#products}}{{name}}<br />{{/products}}</td></tr>
+            <tr><td class="k">Free trial</td><td class="v">{{trialDays}} days, until {{trialEndsOn}}</td></tr>
+            <tr><td class="k" style="border-bottom:0;">This link expires</td><td class="v" style="border-bottom:0;">{{linkExpiresAt}}</td></tr>
+          </table>
+        </mj-text>
+
+        <!-- 3. What to do now -->
+        <mj-text mj-class="h2">Getting started</mj-text>
+        <mj-text padding="0 0 4px 0">
+          <strong style="color:#1B2A4A;">1. Confirm your email.</strong>
+        </mj-text>
+        <mj-button href="{{confirmUrl}}">Confirm and start my trial</mj-button>
+        <mj-text mj-class="small" padding="0 0 18px 0">
+          If the button doesn't work, copy this link into your browser:<br /><span class="em-url">{{confirmUrl}}</span>
+        </mj-text>
+        <mj-text>
+          <strong style="color:#1B2A4A;">2. Set your password and security key.</strong> The page that opens sets up your organisation in a few seconds, then shows a button to do this. You'll sign in to every Oortcloud and Afiax service with this one account (Afiax IAM): a password plus an authenticator app, a passkey or a security key.
+        </mj-text>
+        <mj-text>
+          <strong style="color:#1B2A4A;">3. Invite your team</strong> from your Oortcloud portal, when you're ready.
+        </mj-text>
+
+        <!-- 5. What happens next -->
+        <mj-text mj-class="h2">What happens next</mj-text>
+        <mj-text>
+          Your portal is ready as soon as you confirm. Some services, such as your pharmacy, billing or finance system, take up to half an hour to set up: we'll email you when they're ready.
+        </mj-text>
+        <mj-text>
+          The trial is free until {{trialEndsOn}}. Before it ends we'll remind you, and you can pay by M-Pesa or card from the portal. Nothing is charged without a bill you can see first.
+        </mj-text>
+
+        <!-- 6. Help -->
+        <mj-text padding="8px 0 18px 0">
+          <table class="em-help" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td>
+              <strong style="color:#1B2A4A;">Need help?</strong><br />
+              Email Oortcloud support at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>.
+              {{#helpUrl}}<br /><a href="{{helpUrl}}">Read the getting-started guide</a>{{/helpUrl}}
+            </td></tr>
+          </table>
+        </mj-text>
+
+        <mj-text mj-class="small" padding="0">
+          Didn't sign up? Ignore this email: nothing is created until the link is used, and it stops working at {{linkExpiresAt}}.
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./partials/oortcloud-footer.mjml" />
+  </mj-body>
+</mjml>
