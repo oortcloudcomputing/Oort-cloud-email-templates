@@ -1,0 +1,25 @@
+{
+  "subject": "Public health alert: {{caseCount}} {{diseaseName}} cases in {{windowLabel}} {{placePhrase}}",
+  "fields": {
+    "diseaseName": "Disease, e.g. Measles.",
+    "icd11Code": "The rule's ICD-11 code.",
+    "placeLabel": "Facility name, or \"<county> County\" for county rules.",
+    "projectName": "Optional. The organisation that recorded the cases.",
+    "caseCount": "Number of cases in the event.",
+    "confirmedCount": "How many are confirmed.",
+    "threshold": "The rule's threshold.",
+    "windowLabel": "The rule's window in words: \"1 day\", \"3 days\".",
+    "ruleDescription": "The rule in words.",
+    "firstCaseDate": "Date of the first case, e.g. 17 Nov 2026.",
+    "lastCaseDate": "Date of the latest case.",
+    "detectedAt": "When Afiax detected it (EAT).",
+    "eventId": "Public health event reference.",
+    "cases": "List of {caseNumber, date, status, sex, age, area, facility}. De-identified: no names, IDs or contact details.",
+    "recommendedActions": "List of {number, text}.",
+    "reportUrl": "Optional. Link to the event report in Afiax.",
+    "facilityPhone": "Optional. The facility's phone number.",
+    "supportEmail": "Afiax support address.",
+    "placePhrase": "\"at <facility>\" or \"in <county> County\", used in sentences.",
+    "countyScope": "true for county-wide rules: adds a Facility column and points questions to the facilities."
+  }
+}

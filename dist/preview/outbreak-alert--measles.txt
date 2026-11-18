@@ -1,0 +1,48 @@
+Subject: Public health alert: 5 Measles cases in 3 days at Nairobi West Clinic
+
+Possible Measles outbreak at Nairobi West Clinic
+
+Afiax has counted 5 Measles cases in 3 days at Nairobi West Clinic, recorded by Nairobi West Clinic. That reaches the alert threshold of 5 cases, so it may be an outbreak and needs a response now.
+
+You're getting this because this address is on the outbreak alert list for Nairobi West Clinic.
+
+  Disease:               Measles (ICD-11 1F03)
+  Where:                 Nairobi West Clinic
+  Cases:                 5, of which 2 confirmed
+  First and last case:   17 Nov 2026 to 19 Nov 2026
+  Alert rule:            5 or more Measles cases within 3 days at the same facility
+  Detected:              19 Nov 2026, 10:42 EAT
+  Event reference:       PHE-20261119-measles-cluster-3f2a9c1b
+
+THE CASES
+
+  1. 17 Nov 2026 · confirmed · female, age 4 · Langata, Nairobi
+  2. 18 Nov 2026 · provisional · male, age 2 · Langata, Nairobi
+  3. 18 Nov 2026 · confirmed · male, age 7 · Kibra, Nairobi
+  4. 19 Nov 2026 · provisional · female, age 1 · Langata, Nairobi
+  5. 19 Nov 2026 · provisional · unknown · Nairobi
+
+Names, ID numbers and contact details are left out to protect patients. Staff at Nairobi West Clinic can see the full records in Afiax.
+
+WHAT TO DO NOW
+
+1. Notify the Sub-County and County Disease Surveillance Coordinators immediately
+2. Verify the cases and collect specimens for laboratory confirmation
+3. Conduct active case search and line-list all cases
+4. Institute control measures appropriate to the disease
+
+If you have an Afiax account at Nairobi West Clinic, the event report with links to each case is here:
+https://app.afiax.africa/DocumentReference/7a1b2c3d-0000-4c1b-8a3e-2f6d7c8b9a01
+
+WHAT HAPPENS NEXT
+
+Afiax has opened a public health event and a follow-up task for Nairobi West Clinic. If more Measles cases are recorded at Nairobi West Clinic while the event is open, they're added to it. You won't get a separate email for each one.
+
+QUESTIONS?
+
+About the cases: contact Nairobi West Clinic on +254 20 123 4567.
+About this alert or the alert rule: email Afiax support at support@afiax.africa and quote PHE-20261119-measles-cluster-3f2a9c1b.
+
+--
+Sent by Afiax Connected Healthcare, a service of Oort Cloud Computing Limited.
+Afiax will never ask for your password by email or phone.

@@ -1,0 +1,173 @@
+{
+  "brand": "afiax",
+  "subject": "Public health alert: {{caseCount}} {{diseaseName}} cases in {{windowLabel}} {{placePhrase}}",
+  "fields": {
+    "diseaseName": "Disease, e.g. Measles.",
+    "icd11Code": "The rule's ICD-11 code.",
+    "placeLabel": "Facility name, or \"<county> County\" for county rules.",
+    "projectName": "Optional. The organisation that recorded the cases.",
+    "caseCount": "Number of cases in the event.",
+    "confirmedCount": "How many are confirmed.",
+    "threshold": "The rule's threshold.",
+    "windowLabel": "The rule's window in words: \"1 day\", \"3 days\".",
+    "ruleDescription": "The rule in words.",
+    "firstCaseDate": "Date of the first case, e.g. 17 Nov 2026.",
+    "lastCaseDate": "Date of the latest case.",
+    "detectedAt": "When Afiax detected it (EAT).",
+    "eventId": "Public health event reference.",
+    "cases": "List of {caseNumber, date, status, sex, age, area, facility}. De-identified: no names, IDs or contact details.",
+    "recommendedActions": "List of {number, text}.",
+    "reportUrl": "Optional. Link to the event report in Afiax.",
+    "facilityPhone": "Optional. The facility's phone number.",
+    "supportEmail": "Afiax support address.",
+    "placePhrase": "\"at <facility>\" or \"in <county> County\", used in sentences.",
+    "countyScope": "true for county-wide rules: adds a Facility column and points questions to the facilities."
+  },
+  "samples": {
+    "measles": {
+      "diseaseName": "Measles",
+      "icd11Code": "1F03",
+      "placeLabel": "Nairobi West Clinic",
+      "projectName": "Nairobi West Clinic",
+      "caseCount": 5,
+      "confirmedCount": 2,
+      "threshold": 5,
+      "windowLabel": "3 days",
+      "ruleDescription": "5 or more Measles cases within 3 days at the same facility",
+      "firstCaseDate": "17 Nov 2026",
+      "lastCaseDate": "19 Nov 2026",
+      "detectedAt": "19 Nov 2026, 10:42 EAT",
+      "eventId": "PHE-20261119-measles-cluster-3f2a9c1b",
+      "cases": [
+        {
+          "caseNumber": 1,
+          "date": "17 Nov 2026",
+          "status": "confirmed",
+          "sex": "female",
+          "age": "4",
+          "area": "Langata, Nairobi"
+        },
+        {
+          "caseNumber": 2,
+          "date": "18 Nov 2026",
+          "status": "provisional",
+          "sex": "male",
+          "age": "2",
+          "area": "Langata, Nairobi"
+        },
+        {
+          "caseNumber": 3,
+          "date": "18 Nov 2026",
+          "status": "confirmed",
+          "sex": "male",
+          "age": "7",
+          "area": "Kibra, Nairobi"
+        },
+        {
+          "caseNumber": 4,
+          "date": "19 Nov 2026",
+          "status": "provisional",
+          "sex": "female",
+          "age": "1",
+          "area": "Langata, Nairobi"
+        },
+        {
+          "caseNumber": 5,
+          "date": "19 Nov 2026",
+          "status": "provisional",
+          "sex": "unknown",
+          "age": "",
+          "area": "Nairobi"
+        }
+      ],
+      "recommendedActions": [
+        {
+          "number": 1,
+          "text": "Notify the Sub-County and County Disease Surveillance Coordinators immediately"
+        },
+        {
+          "number": 2,
+          "text": "Verify the cases and collect specimens for laboratory confirmation"
+        },
+        {
+          "number": 3,
+          "text": "Conduct active case search and line-list all cases"
+        },
+        {
+          "number": 4,
+          "text": "Institute control measures appropriate to the disease"
+        }
+      ],
+      "reportUrl": "https://app.afiax.africa/DocumentReference/7a1b2c3d-0000-4c1b-8a3e-2f6d7c8b9a01",
+      "facilityPhone": "+254 20 123 4567",
+      "supportEmail": "support@afiax.africa",
+      "placePhrase": "at Nairobi West Clinic"
+    },
+    "cholera-county": {
+      "diseaseName": "Cholera",
+      "icd11Code": "1A00",
+      "placeLabel": "Kisumu County",
+      "projectName": "Kisumu Lakeside Hospital",
+      "caseCount": 3,
+      "confirmedCount": 1,
+      "threshold": 3,
+      "windowLabel": "7 days",
+      "ruleDescription": "3 or more Cholera cases within 7 days in the same county",
+      "firstCaseDate": "14 Nov 2026",
+      "lastCaseDate": "19 Nov 2026",
+      "detectedAt": "19 Nov 2026, 10:42 EAT",
+      "eventId": "PHE-20261119-cholera-county-9a8b7c6d",
+      "cases": [
+        {
+          "caseNumber": 1,
+          "date": "14 Nov 2026",
+          "status": "confirmed",
+          "sex": "male",
+          "age": "34",
+          "area": "Kisumu Central, Kisumu",
+          "facility": "Kisumu Lakeside Hospital"
+        },
+        {
+          "caseNumber": 2,
+          "date": "16 Nov 2026",
+          "status": "provisional",
+          "sex": "female",
+          "age": "29",
+          "area": "Nyando, Kisumu",
+          "facility": "Ahero Sub-County Hospital"
+        },
+        {
+          "caseNumber": 3,
+          "date": "19 Nov 2026",
+          "status": "provisional",
+          "sex": "female",
+          "age": "61",
+          "area": "Kisumu East, Kisumu",
+          "facility": "Kisumu Lakeside Hospital"
+        }
+      ],
+      "recommendedActions": [
+        {
+          "number": 1,
+          "text": "Notify the Sub-County and County Disease Surveillance Coordinators immediately"
+        },
+        {
+          "number": 2,
+          "text": "Verify the cases and collect specimens for laboratory confirmation"
+        },
+        {
+          "number": 3,
+          "text": "Conduct active case search and line-list all cases"
+        },
+        {
+          "number": 4,
+          "text": "Institute control measures appropriate to the disease"
+        }
+      ],
+      "reportUrl": "https://app.afiax.africa/DocumentReference/7a1b2c3d-0000-4c1b-8a3e-2f6d7c8b9a01",
+      "supportEmail": "support@afiax.africa",
+      "placePhrase": "in Kisumu County",
+      "countyScope": true
+    }
+  }
+}

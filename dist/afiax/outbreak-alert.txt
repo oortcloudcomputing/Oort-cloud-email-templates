@@ -1,0 +1,46 @@
+{{! Cases are de-identified: no names, IDs, phone numbers or exact addresses. }}
+Possible {{diseaseName}} outbreak {{placePhrase}}
+
+Afiax has counted {{caseCount}} {{diseaseName}} cases in {{windowLabel}} {{placePhrase}}{{#projectName}}, recorded by {{projectName}}{{/projectName}}. That reaches the alert threshold of {{threshold}} cases, so it may be an outbreak and needs a response now.
+
+You're getting this because this address is on the outbreak alert list for {{#projectName}}{{projectName}}{{/projectName}}{{^projectName}}this organisation{{/projectName}}.
+
+  Disease:               {{diseaseName}} (ICD-11 {{icd11Code}})
+  Where:                 {{placeLabel}}
+  Cases:                 {{caseCount}}, of which {{confirmedCount}} confirmed
+  First and last case:   {{firstCaseDate}} to {{lastCaseDate}}
+  Alert rule:            {{ruleDescription}}
+  Detected:              {{detectedAt}}
+  Event reference:       {{eventId}}
+
+THE CASES
+
+{{#cases}}
+  {{caseNumber}}. {{date}} · {{status}} · {{sex}}{{#age}}, age {{age}}{{/age}} · {{area}}{{#countyScope}} · {{facility}}{{/countyScope}}
+{{/cases}}
+
+Names, ID numbers and contact details are left out to protect patients. Staff at {{#countyScope}}the facilities that recorded them{{/countyScope}}{{^countyScope}}{{placeLabel}}{{/countyScope}} can see the full records in Afiax.
+
+WHAT TO DO NOW
+
+{{#recommendedActions}}
+{{number}}. {{text}}
+{{/recommendedActions}}
+{{#reportUrl}}
+
+If you have an Afiax account at {{projectName}}, the event report with links to each case is here:
+{{reportUrl}}
+{{/reportUrl}}
+
+WHAT HAPPENS NEXT
+
+Afiax has opened a public health event and a follow-up task for {{projectName}}. If more {{diseaseName}} cases are recorded {{placePhrase}} while the event is open, they're added to it. You won't get a separate email for each one.
+
+QUESTIONS?
+
+About the cases: contact {{#countyScope}}the facilities listed above{{/countyScope}}{{^countyScope}}{{placeLabel}}{{#facilityPhone}} on {{facilityPhone}}{{/facilityPhone}}{{/countyScope}}.
+About this alert or the alert rule: email Afiax support at {{supportEmail}} and quote {{eventId}}.
+
+--
+Sent by Afiax Connected Healthcare, a service of Oort Cloud Computing Limited.
+Afiax will never ask for your password by email or phone.

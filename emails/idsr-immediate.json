@@ -1,0 +1,46 @@
+{
+  "brand": "afiax",
+  "subject": "IDSR immediate notification: {{diseaseName}} at {{facilityName}}",
+  "fields": {
+    "diseaseName": "Notifiable disease.",
+    "icd11Code": "Optional. ICD-11 code.",
+    "caseStatus": "suspected, provisional, confirmed, etc.",
+    "onsetDate": "Onset date, or \"not recorded\".",
+    "facilityName": "Reporting facility.",
+    "mflCode": "Optional. Facility MFL code.",
+    "facilityPhone": "Optional. Facility phone.",
+    "projectName": "Optional. The organisation.",
+    "notifiedAt": "When Afiax sent it (EAT).",
+    "khisAccepted": "true when KHIS accepted the event.",
+    "khisEventUid": "DHIS2 event UID, when accepted.",
+    "reference": "Afiax reference for the case (the Condition id). Not a patient identifier.",
+    "supportEmail": "Afiax support address."
+  },
+  "samples": {
+    "khis-accepted": {
+      "diseaseName": "Cholera",
+      "icd11Code": "1A00",
+      "caseStatus": "suspected",
+      "onsetDate": "18 Nov 2026",
+      "facilityName": "Kisumu Lakeside Hospital",
+      "mflCode": "13023",
+      "facilityPhone": "+254 57 202 0000",
+      "projectName": "Kisumu Lakeside Hospital",
+      "notifiedAt": "19 Nov 2026, 10:42 EAT",
+      "khisAccepted": true,
+      "khisEventUid": "EvtUid12345",
+      "reference": "Condition/5d6e7f80-1a2b-4c3d-8e9f-0a1b2c3d4e5f",
+      "supportEmail": "support@afiax.africa"
+    },
+    "khis-failed": {
+      "diseaseName": "Cholera",
+      "caseStatus": "suspected",
+      "onsetDate": "not recorded",
+      "facilityName": "Kisumu Lakeside Hospital",
+      "notifiedAt": "19 Nov 2026, 10:42 EAT",
+      "khisAccepted": false,
+      "reference": "Condition/5d6e7f80-1a2b-4c3d-8e9f-0a1b2c3d4e5f",
+      "supportEmail": "support@afiax.africa"
+    }
+  }
+}

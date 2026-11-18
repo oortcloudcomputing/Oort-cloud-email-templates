@@ -1,0 +1,82 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-include path="./partials/afiax-head.mjml" />
+    <mj-title>Public health alert</mj-title>
+    <mj-preview>{{caseCount}} {{diseaseName}} cases in {{windowLabel}} {{placePhrase}}. Verify the cases and notify surveillance coordinators.</mj-preview>
+  </mj-head>
+
+  <mj-body background-color="#F1F5F9" width="600px">
+    <mj-include path="./partials/afiax-header.mjml" />
+
+    <mj-section background-color="#ffffff" padding="18px 32px 30px 32px">
+      <mj-column>
+        {{! Cases are de-identified: no names, IDs, phone numbers or exact addresses. Recipients may not have Afiax accounts, so the email must be complete on its own. }}
+
+        <mj-text mj-class="h1">Possible {{diseaseName}} outbreak {{placePhrase}}</mj-text>
+        <mj-text>
+          Afiax has counted <strong style="color:#1B2A4A;">{{caseCount}} {{diseaseName}} cases in {{windowLabel}}</strong> {{placePhrase}}{{#projectName}}, recorded by {{projectName}}{{/projectName}}. That reaches the alert threshold of {{threshold}} cases, so it may be an outbreak and needs a response now.
+        </mj-text>
+        <mj-text>
+          You're getting this because this address is on the outbreak alert list for {{#projectName}}{{projectName}}{{/projectName}}{{^projectName}}this organisation{{/projectName}}.
+        </mj-text>
+
+        <mj-text padding="4px 0 22px 0">
+          <table class="em-details" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td class="k">Disease</td><td class="v">{{diseaseName}} (ICD-11 {{icd11Code}})</td></tr>
+            <tr><td class="k">Where</td><td class="v">{{placeLabel}}</td></tr>
+            <tr><td class="k">Cases</td><td class="v">{{caseCount}}, of which {{confirmedCount}} confirmed</td></tr>
+            <tr><td class="k">First and last case</td><td class="v">{{firstCaseDate}} to {{lastCaseDate}}</td></tr>
+            <tr><td class="k">Alert rule</td><td class="v">{{ruleDescription}}</td></tr>
+            <tr><td class="k">Detected</td><td class="v">{{detectedAt}}</td></tr>
+            <tr><td class="k" style="border-bottom:0;">Event reference</td><td class="v" style="border-bottom:0;">{{eventId}}</td></tr>
+          </table>
+        </mj-text>
+
+        <mj-text mj-class="h2">The cases</mj-text>
+        <mj-text padding="0 0 8px 0">
+          <table class="em-cases" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><th>#</th><th>Date</th><th>Status</th><th>Sex</th><th>Age</th><th>Area</th>{{#countyScope}}<th>Facility</th>{{/countyScope}}</tr>
+            {{#cases}}<tr><td>{{caseNumber}}</td><td>{{date}}</td><td>{{status}}</td><td>{{sex}}</td><td>{{age}}</td><td>{{area}}</td>{{#countyScope}}<td>{{facility}}</td>{{/countyScope}}</tr>{{/cases}}
+          </table>
+        </mj-text>
+        <mj-text mj-class="small" padding="0 0 18px 0">
+          Names, ID numbers and contact details are left out to protect patients. Staff at {{#countyScope}}the facilities that recorded them{{/countyScope}}{{^countyScope}}{{placeLabel}}{{/countyScope}} can see the full records in Afiax.
+        </mj-text>
+
+        <mj-text mj-class="h2">What to do now</mj-text>
+        <mj-raw>{{#recommendedActions}}</mj-raw>
+        <mj-text>
+          <strong style="color:#1B2A4A;">{{number}}.</strong> {{text}}
+        </mj-text>
+        <mj-raw>{{/recommendedActions}}</mj-raw>
+        <mj-raw>{{#reportUrl}}</mj-raw>
+        <mj-text padding="0 0 4px 0">
+          If you have an Afiax account at {{projectName}}, the event report with links to each case is here:
+        </mj-text>
+        <mj-button href="{{reportUrl}}">Open the event report</mj-button>
+        <mj-text mj-class="small" padding="0 0 18px 0">
+          If the button doesn't work, copy this link into your browser:<br /><span class="em-url">{{reportUrl}}</span>
+        </mj-text>
+        <mj-raw>{{/reportUrl}}</mj-raw>
+
+        <mj-text mj-class="h2">What happens next</mj-text>
+        <mj-text>
+          Afiax has opened a public health event and a follow-up task for {{projectName}}. If more {{diseaseName}} cases are recorded {{placePhrase}} while the event is open, they're added to it. You won't get a separate email for each one.
+        </mj-text>
+
+        <mj-text padding="8px 0 18px 0">
+          <table class="em-help" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td>
+              <strong style="color:#1B2A4A;">Questions?</strong><br />
+              About the cases: contact {{#countyScope}}the facilities listed above{{/countyScope}}{{^countyScope}}{{placeLabel}}{{#facilityPhone}} on {{facilityPhone}}{{/facilityPhone}}{{/countyScope}}.<br />
+              About this alert or the alert rule: email Afiax support at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a> and quote {{eventId}}.
+            </td></tr>
+          </table>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./partials/afiax-footer.mjml" />
+  </mj-body>
+</mjml>

@@ -1,0 +1,18 @@
+{
+  "subject": "IDSR immediate notification: {{diseaseName}} at {{facilityName}}",
+  "fields": {
+    "diseaseName": "Notifiable disease.",
+    "icd11Code": "Optional. ICD-11 code.",
+    "caseStatus": "suspected, provisional, confirmed, etc.",
+    "onsetDate": "Onset date, or \"not recorded\".",
+    "facilityName": "Reporting facility.",
+    "mflCode": "Optional. Facility MFL code.",
+    "facilityPhone": "Optional. Facility phone.",
+    "projectName": "Optional. The organisation.",
+    "notifiedAt": "When Afiax sent it (EAT).",
+    "khisAccepted": "true when KHIS accepted the event.",
+    "khisEventUid": "DHIS2 event UID, when accepted.",
+    "reference": "Afiax reference for the case (the Condition id). Not a patient identifier.",
+    "supportEmail": "Afiax support address."
+  }
+}

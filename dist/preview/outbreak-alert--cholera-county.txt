@@ -1,0 +1,46 @@
+Subject: Public health alert: 3 Cholera cases in 7 days in Kisumu County
+
+Possible Cholera outbreak in Kisumu County
+
+Afiax has counted 3 Cholera cases in 7 days in Kisumu County, recorded by Kisumu Lakeside Hospital. That reaches the alert threshold of 3 cases, so it may be an outbreak and needs a response now.
+
+You're getting this because this address is on the outbreak alert list for Kisumu Lakeside Hospital.
+
+  Disease:               Cholera (ICD-11 1A00)
+  Where:                 Kisumu County
+  Cases:                 3, of which 1 confirmed
+  First and last case:   14 Nov 2026 to 19 Nov 2026
+  Alert rule:            3 or more Cholera cases within 7 days in the same county
+  Detected:              19 Nov 2026, 10:42 EAT
+  Event reference:       PHE-20261119-cholera-county-9a8b7c6d
+
+THE CASES
+
+  1. 14 Nov 2026 · confirmed · male, age 34 · Kisumu Central, Kisumu · Kisumu Lakeside Hospital
+  2. 16 Nov 2026 · provisional · female, age 29 · Nyando, Kisumu · Ahero Sub-County Hospital
+  3. 19 Nov 2026 · provisional · female, age 61 · Kisumu East, Kisumu · Kisumu Lakeside Hospital
+
+Names, ID numbers and contact details are left out to protect patients. Staff at the facilities that recorded them can see the full records in Afiax.
+
+WHAT TO DO NOW
+
+1. Notify the Sub-County and County Disease Surveillance Coordinators immediately
+2. Verify the cases and collect specimens for laboratory confirmation
+3. Conduct active case search and line-list all cases
+4. Institute control measures appropriate to the disease
+
+If you have an Afiax account at Kisumu Lakeside Hospital, the event report with links to each case is here:
+https://app.afiax.africa/DocumentReference/7a1b2c3d-0000-4c1b-8a3e-2f6d7c8b9a01
+
+WHAT HAPPENS NEXT
+
+Afiax has opened a public health event and a follow-up task for Kisumu Lakeside Hospital. If more Cholera cases are recorded in Kisumu County while the event is open, they're added to it. You won't get a separate email for each one.
+
+QUESTIONS?
+
+About the cases: contact the facilities listed above.
+About this alert or the alert rule: email Afiax support at support@afiax.africa and quote PHE-20261119-cholera-county-9a8b7c6d.
+
+--
+Sent by Afiax Connected Healthcare, a service of Oort Cloud Computing Limited.
+Afiax will never ask for your password by email or phone.

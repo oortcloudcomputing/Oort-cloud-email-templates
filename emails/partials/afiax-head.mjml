@@ -28,6 +28,10 @@
       .em-help { width: 100%; border-collapse: collapse; background: #F0F9FF; border-left: 4px solid #00A9E0; }
       .em-help td { padding: 14px 16px; font-size: 14px; line-height: 1.55; color: #334155; }
       .em-warn { width: 100%; border-collapse: collapse; background: #FFF7ED; border-left: 4px solid #C2410C; }
+      .em-cases { width: 100%; border-collapse: collapse; border: 1px solid #E2E8F0; }
+      .em-cases th, .em-cases td { word-break: normal; overflow-wrap: normal; }
+      .em-cases th { padding: 7px 6px; font-size: 12px; font-weight: 700; color: #1B2A4A; text-align: left; background: #F8FAFC; border-bottom: 1px solid #E2E8F0; }
+      .em-cases td { padding: 7px 6px; font-size: 13px; color: #334155; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
       .em-warn td { padding: 14px 16px; font-size: 14px; line-height: 1.55; color: #334155; }
     </mj-style>
   </mj-head>

@@ -1,0 +1,46 @@
+{{! No patient name, ID, contact details or address. }}
+{{diseaseName}} case at {{facilityName}}
+
+A {{caseStatus}} case of {{diseaseName}} was recorded at {{facilityName}}. {{diseaseName}} is immediately notifiable under IDSR, so Afiax sends this notification straight away.
+
+You're getting this because this address is the IDSR notification contact for {{#projectName}}{{projectName}}{{/projectName}}{{^projectName}}this organisation{{/projectName}}.
+
+  Disease:          {{diseaseName}}{{#icd11Code}} (ICD-11 {{icd11Code}}){{/icd11Code}}
+  Case status:      {{caseStatus}}
+  Onset:            {{onsetDate}}
+  Facility:         {{facilityName}}{{#mflCode}} (MFL {{mflCode}}){{/mflCode}}
+{{#facilityPhone}}
+  Facility phone:   {{facilityPhone}}
+{{/facilityPhone}}
+  Notified:         {{notifiedAt}}
+  KHIS:             {{#khisAccepted}}Reported (DHIS2 event {{khisEventUid}}){{/khisAccepted}}{{^khisAccepted}}NOT YET REPORTED{{/khisAccepted}}
+  Afiax reference:  {{reference}}
+{{^khisAccepted}}
+
+THIS CASE IS NOT IN KHIS YET
+
+Afiax couldn't submit it to KHIS. It will try again every hour, and you won't get another email when it does. Until then, this email is the notification: follow your usual IDSR reporting for this case.
+{{/khisAccepted}}
+
+The patient's name, ID numbers, contact details and address are left out to protect them. Staff at {{facilityName}} can see the full record in Afiax.
+
+WHAT TO DO NOW
+
+1. Contact {{facilityName}}{{#facilityPhone}} on {{facilityPhone}}{{/facilityPhone}} to confirm the case and get the case details you need.
+
+2. Follow the IDSR technical guidelines for {{diseaseName}}: case investigation, specimen collection for laboratory confirmation, and control measures.
+
+3. Pass it on to the sub-county or county surveillance coordinator if that isn't you.
+
+WHAT HAPPENS NEXT
+
+{{#khisAccepted}}The case is in KHIS under the IDSR immediate-notification programme. {{/khisAccepted}}If more cases of {{diseaseName}} are recorded, each one gets its own notification. If several come close together, you may also get a separate outbreak alert.
+
+QUESTIONS?
+
+About the case: contact {{facilityName}}{{#facilityPhone}} on {{facilityPhone}}{{/facilityPhone}}.
+About this notification or KHIS delivery: email Afiax support at {{supportEmail}} and quote {{reference}}.
+
+--
+Sent by Afiax Connected Healthcare, a service of Oort Cloud Computing Limited.
+Afiax will never ask for your password by email or phone.

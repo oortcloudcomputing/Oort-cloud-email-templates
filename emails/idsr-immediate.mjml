@@ -1,0 +1,82 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-include path="./partials/afiax-head.mjml" />
+    <mj-title>IDSR immediate notification</mj-title>
+    <mj-preview>A {{caseStatus}} case of {{diseaseName}} was recorded at {{facilityName}}. {{#khisAccepted}}Reported to KHIS.{{/khisAccepted}}{{^khisAccepted}}Not yet in KHIS.{{/khisAccepted}}</mj-preview>
+  </mj-head>
+
+  <mj-body background-color="#F1F5F9" width="600px">
+    <mj-include path="./partials/afiax-header.mjml" />
+
+    <mj-section background-color="#ffffff" padding="18px 32px 30px 32px">
+      <mj-column>
+        {{! No patient name, ID, contact details or address. Recipients may not have Afiax accounts. }}
+
+        <mj-text mj-class="h1">{{diseaseName}} case at {{facilityName}}</mj-text>
+        <mj-text>
+          A <strong style="color:#1B2A4A;">{{caseStatus}}</strong> case of <strong style="color:#1B2A4A;">{{diseaseName}}</strong> was recorded at {{facilityName}}. {{diseaseName}} is immediately notifiable under IDSR, so Afiax sends this notification straight away.
+        </mj-text>
+        <mj-text>
+          You're getting this because this address is the IDSR notification contact for {{#projectName}}{{projectName}}{{/projectName}}{{^projectName}}this organisation{{/projectName}}.
+        </mj-text>
+
+        <mj-text padding="4px 0 22px 0">
+          <table class="em-details" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td class="k">Disease</td><td class="v">{{diseaseName}}{{#icd11Code}} (ICD-11 {{icd11Code}}){{/icd11Code}}</td></tr>
+            <tr><td class="k">Case status</td><td class="v">{{caseStatus}}</td></tr>
+            <tr><td class="k">Onset</td><td class="v">{{onsetDate}}</td></tr>
+            <tr><td class="k">Facility</td><td class="v">{{facilityName}}{{#mflCode}} (MFL {{mflCode}}){{/mflCode}}</td></tr>
+            {{#facilityPhone}}<tr><td class="k">Facility phone</td><td class="v">{{facilityPhone}}</td></tr>{{/facilityPhone}}
+            <tr><td class="k">Notified</td><td class="v">{{notifiedAt}}</td></tr>
+            <tr><td class="k">KHIS</td><td class="v">{{#khisAccepted}}Reported (DHIS2 event {{khisEventUid}}){{/khisAccepted}}{{^khisAccepted}}<strong>Not yet reported</strong>{{/khisAccepted}}</td></tr>
+            <tr><td class="k" style="border-bottom:0;">Afiax reference</td><td class="v" style="border-bottom:0;">{{reference}}</td></tr>
+          </table>
+        </mj-text>
+
+        <mj-raw>{{^khisAccepted}}</mj-raw>
+        <mj-text padding="0 0 18px 0">
+          <table class="em-warn" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td>
+              <strong style="color:#1B2A4A;">This case is not in KHIS yet</strong><br />
+              Afiax couldn't submit it to KHIS. It will try again every hour, and you won't get another email when it does. Until then, this email is the notification: follow your usual IDSR reporting for this case.
+            </td></tr>
+          </table>
+        </mj-text>
+        <mj-raw>{{/khisAccepted}}</mj-raw>
+
+        <mj-text mj-class="small" padding="0 0 18px 0">
+          The patient's name, ID numbers, contact details and address are left out to protect them. Staff at {{facilityName}} can see the full record in Afiax.
+        </mj-text>
+
+        <mj-text mj-class="h2">What to do now</mj-text>
+        <mj-text>
+          <strong style="color:#1B2A4A;">1. Contact {{facilityName}}</strong>{{#facilityPhone}} on {{facilityPhone}}{{/facilityPhone}} to confirm the case and get the case details you need.
+        </mj-text>
+        <mj-text>
+          <strong style="color:#1B2A4A;">2. Follow the IDSR technical guidelines for {{diseaseName}}:</strong> case investigation, specimen collection for laboratory confirmation, and control measures.
+        </mj-text>
+        <mj-text>
+          <strong style="color:#1B2A4A;">3. Pass it on</strong> to the sub-county or county surveillance coordinator if that isn't you.
+        </mj-text>
+
+        <mj-text mj-class="h2">What happens next</mj-text>
+        <mj-text>
+          {{#khisAccepted}}The case is in KHIS under the IDSR immediate-notification programme. {{/khisAccepted}}If more cases of {{diseaseName}} are recorded, each one gets its own notification. If several come close together, you may also get a separate outbreak alert.
+        </mj-text>
+
+        <mj-text padding="8px 0 18px 0">
+          <table class="em-help" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td>
+              <strong style="color:#1B2A4A;">Questions?</strong><br />
+              About the case: contact {{facilityName}}{{#facilityPhone}} on {{facilityPhone}}{{/facilityPhone}}.<br />
+              About this notification or KHIS delivery: email Afiax support at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a> and quote {{reference}}.
+            </td></tr>
+          </table>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./partials/afiax-footer.mjml" />
+  </mj-body>
+</mjml>

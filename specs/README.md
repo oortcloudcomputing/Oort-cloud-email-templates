@@ -10,8 +10,8 @@ supply. Write or update the spec first, then the template.
 | Password reset | Afiax Clinical Suite | [password-reset.md](password-reset.md) | [emails/password-reset](../emails/password-reset.mjml) | **Built** |
 | Email address change (confirm new + notice to old) | Afiax Clinical Suite | [email-change.md](email-change.md) | [verify](../emails/email-change-verify.mjml), [notice](../emails/email-change-notice.mjml) | **Built** |
 | Emergency access (break-glass) alert | Afiax Clinical Suite, Kenya | [break-glass-alert.md](break-glass-alert.md) | [emails/break-glass-alert](../emails/break-glass-alert.mjml) | **Built** |
-| Outbreak alert | Afiax Clinical Suite, Kenya | [outbreak-alert.md](outbreak-alert.md) | | Spec |
-| IDSR immediate notification | Afiax Clinical Suite, Kenya | [idsr-immediate.md](idsr-immediate.md) | | Spec |
+| Outbreak alert | Afiax Clinical Suite, Kenya | [outbreak-alert.md](outbreak-alert.md) | [emails/outbreak-alert](../emails/outbreak-alert.mjml) | **Built** |
+| IDSR immediate notification | Afiax Clinical Suite, Kenya | [idsr-immediate.md](idsr-immediate.md) | [emails/idsr-immediate](../emails/idsr-immediate.mjml) | **Built** |
 | Signup confirmation | Oortcloud Console | [signup-confirmation.md](signup-confirmation.md) | | Spec |
 | Services ready | Oortcloud Console | [services-ready.md](services-ready.md) | | Spec |
 | Setup needs a hand (provisioning failed) | Oortcloud Console (`provisioning.py` `notify_failed`) | to write | | Not yet specced |

@@ -1,0 +1,42 @@
+Subject: IDSR immediate notification: Cholera at Kisumu Lakeside Hospital
+
+Cholera case at Kisumu Lakeside Hospital
+
+A suspected case of Cholera was recorded at Kisumu Lakeside Hospital. Cholera is immediately notifiable under IDSR, so Afiax sends this notification straight away.
+
+You're getting this because this address is the IDSR notification contact for this organisation.
+
+  Disease:          Cholera
+  Case status:      suspected
+  Onset:            not recorded
+  Facility:         Kisumu Lakeside Hospital
+  Notified:         19 Nov 2026, 10:42 EAT
+  KHIS:             NOT YET REPORTED
+  Afiax reference:  Condition/5d6e7f80-1a2b-4c3d-8e9f-0a1b2c3d4e5f
+
+THIS CASE IS NOT IN KHIS YET
+
+Afiax couldn't submit it to KHIS. It will try again every hour, and you won't get another email when it does. Until then, this email is the notification: follow your usual IDSR reporting for this case.
+
+The patient's name, ID numbers, contact details and address are left out to protect them. Staff at Kisumu Lakeside Hospital can see the full record in Afiax.
+
+WHAT TO DO NOW
+
+1. Contact Kisumu Lakeside Hospital to confirm the case and get the case details you need.
+
+2. Follow the IDSR technical guidelines for Cholera: case investigation, specimen collection for laboratory confirmation, and control measures.
+
+3. Pass it on to the sub-county or county surveillance coordinator if that isn't you.
+
+WHAT HAPPENS NEXT
+
+If more cases of Cholera are recorded, each one gets its own notification. If several come close together, you may also get a separate outbreak alert.
+
+QUESTIONS?
+
+About the case: contact Kisumu Lakeside Hospital.
+About this notification or KHIS delivery: email Afiax support at support@afiax.africa and quote Condition/5d6e7f80-1a2b-4c3d-8e9f-0a1b2c3d4e5f.
+
+--
+Sent by Afiax Connected Healthcare, a service of Oort Cloud Computing Limited.
+Afiax will never ask for your password by email or phone.
