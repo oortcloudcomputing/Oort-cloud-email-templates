@@ -1,0 +1,58 @@
+Welcome to Oortcloud, {{firstName}}
+
+We're glad you're joining us{{#teamName}} in {{teamName}}{{/teamName}}. This email has everything you need for your first day: one account for every Oortcloud system, and where to find your work.
+
+  Your role:     {{roleLabel}}
+{{#managerName}}
+  Your manager:  {{managerName}}{{#managerEmail}} ({{managerEmail}}){{/managerEmail}}
+{{/managerName}}
+{{#startDate}}
+  You start:     {{startDate}}
+{{/startDate}}
+  Your sign-in:  {{email}}
+
+STEP 1: SET UP YOUR SIGN-IN
+
+You'll use one account, Afiax IAM, for everything at Oortcloud. Set a password and a security key (an authenticator app, a passkey or a security key): Oortcloud requires both for every staff member.
+{{#setupUrl}}
+The link works once, for a few days:
+{{setupUrl}}
+{{/setupUrl}}
+
+STEP 2: WHERE YOU'LL WORK
+
+The Oortcloud Console: customers, tenants, people and your team's work
+  {{consoleUrl}}
+{{#virtualOfficeUrl}}
+{{virtualOfficeName}}: chat, channels and calls with the team
+  {{virtualOfficeUrl}}
+{{/virtualOfficeUrl}}
+{{#academyUrl}}
+The Oortcloud Academy: your courses and the Oortcloud Handbook
+  {{academyUrl}}
+{{/academyUrl}}
+
+Each one asks you to sign in with Afiax IAM: use {{email}} and the password and security key from step 1.
+{{#hasCourses}}
+
+STEP 3: YOUR REQUIRED TRAINING
+
+{{#courses}}
+  {{title}}, due {{dueOn}}{{#url}}
+  {{url}}{{/url}}
+{{/courses}}
+{{/hasCourses}}
+
+WHAT HAPPENS NEXT
+
+{{#managerName}}{{managerName}} will{{/managerName}}{{^managerName}}Your manager will{{/managerName}} take you through your first tasks. What you can see in each system follows your role; if something you need is missing, ask them.
+
+NEED HELP?
+
+About your work: {{#managerName}}ask {{managerName}}{{#managerEmail}} at {{managerEmail}}{{/managerEmail}}.{{/managerName}}{{^managerName}}ask your manager.{{/managerName}}
+Trouble signing in: email {{supportEmail}}.
+
+Not expecting this? Tell {{supportEmail}} and don't use the link.
+
+Sent by Oortcloud, Oort Cloud Computing Limited, the company behind Afiax Connected Healthcare.
+Oortcloud will never ask for your password by email or phone.

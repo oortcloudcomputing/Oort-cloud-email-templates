@@ -1,0 +1,51 @@
+{
+  "brand": "oortcloud",
+  "subject": "Welcome to Oortcloud, {{firstName}}",
+  "fields": {
+    "firstName": "The new staff member's first name.",
+    "email": "Their sign-in email.",
+    "roleLabel": "Their role, e.g. \"Engineering\".",
+    "teamName": "Optional. Their department.",
+    "managerName": "Optional. Their manager (Frappe HR Reports to).",
+    "managerEmail": "Optional. The manager's email.",
+    "startDate": "Optional. Date of joining, e.g. 1 Dec 2026.",
+    "setupUrl": "Their Afiax IAM setup page (one-time code from the provisioner).",
+    "consoleUrl": "The Oortcloud Console.",
+    "virtualOfficeName": "Optional. The Virtual Office's name.",
+    "virtualOfficeUrl": "Optional. The Virtual Office (Afiax Chat).",
+    "academyUrl": "Optional. The Oortcloud Academy.",
+    "courses": "List of {title, dueOn, url}: their required courses.",
+    "supportEmail": "Who to tell about sign-in trouble.",
+    "hasCourses": "true when there are required courses."
+  },
+  "samples": {
+    "engineer": {
+      "firstName": "Wanjiru",
+      "email": "wanjiru@oortcloudcomputing.co.ke",
+      "roleLabel": "Engineering",
+      "teamName": "Engineering",
+      "managerName": "Grace Achieng",
+      "managerEmail": "grace@oortcloudcomputing.co.ke",
+      "startDate": "1 Dec 2026",
+      "setupUrl": "https://iam.afiax.africa/ui/login/user/invite?userID=1&code=EXAMPLE",
+      "consoleUrl": "https://console.afiax.africa/console",
+      "virtualOfficeName": "Oortcloud Virtual Office",
+      "virtualOfficeUrl": "https://office.chat.afiax.africa",
+      "academyUrl": "https://academy.afiax.africa/lms",
+      "courses": [
+        {
+          "title": "Oortcloud Handbook",
+          "dueOn": "15 Dec 2026",
+          "url": "https://academy.afiax.africa/lms/courses/oortcloud-handbook"
+        },
+        {
+          "title": "Health Data Privacy and Security",
+          "dueOn": "31 Dec 2026",
+          "url": "https://academy.afiax.africa/lms/courses/health-data-privacy"
+        }
+      ],
+      "supportEmail": "support@afiax.africa",
+      "hasCourses": true
+    }
+  }
+}

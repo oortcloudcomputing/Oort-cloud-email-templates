@@ -1,0 +1,88 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-include path="./partials/oortcloud-head.mjml" />
+    <mj-title>Welcome to Oortcloud</mj-title>
+    <mj-preview>Set up your sign-in, then here's where you'll work.</mj-preview>
+  </mj-head>
+
+  <mj-body background-color="#F1F5F9" width="600px">
+    <mj-include path="./partials/oortcloud-header.mjml" />
+
+    <mj-section background-color="#ffffff" padding="18px 32px 30px 32px">
+      <mj-column>
+
+        <!-- 1. What happened, 2. why me -->
+        <mj-text mj-class="h1">Welcome to Oortcloud, {{firstName}}</mj-text>
+        <mj-text>
+          We're glad you're joining us{{#teamName}} in {{teamName}}{{/teamName}}. This email has everything you need for your first day: one account for every Oortcloud system, and where to find your work.
+        </mj-text>
+
+        <!-- 4. Facts to find later -->
+        <mj-text padding="4px 0 22px 0">
+          <table class="em-details" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td class="k">Your role</td><td class="v">{{roleLabel}}</td></tr>
+            {{#managerName}}<tr><td class="k">Your manager</td><td class="v">{{managerName}}{{#managerEmail}}<br /><a href="mailto:{{managerEmail}}">{{managerEmail}}</a>{{/managerEmail}}</td></tr>{{/managerName}}
+            {{#startDate}}<tr><td class="k">You start</td><td class="v">{{startDate}}</td></tr>{{/startDate}}
+            <tr><td class="k" style="border-bottom:0;">Your sign-in</td><td class="v" style="border-bottom:0;">{{email}}</td></tr>
+          </table>
+        </mj-text>
+
+        <!-- 3. What to do now -->
+        <mj-text mj-class="h2">Step 1: set up your sign-in</mj-text>
+        <mj-text padding="0 0 4px 0">
+          You'll use one account, Afiax IAM, for everything at Oortcloud. Set a password and a security key (an authenticator app, a passkey or a security key): Oortcloud requires both for every staff member.
+        </mj-text>
+        <mj-raw>{{#setupUrl}}</mj-raw>
+        <mj-button href="{{setupUrl}}">Set my password and security key</mj-button>
+        <mj-text mj-class="small" padding="0 0 18px 0">
+          The link works once, for a few days. If the button doesn't work, copy this link into your browser:<br /><span class="em-url">{{setupUrl}}</span>
+        </mj-text>
+        <mj-raw>{{/setupUrl}}</mj-raw>
+
+        <mj-text mj-class="h2">Step 2: where you'll work</mj-text>
+        <mj-text padding="4px 0 18px 0">
+          <table class="em-details" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td class="v" style="font-weight:400;"><strong>The Oortcloud Console</strong>: customers, tenants, people and your team's work<br /><a href="{{consoleUrl}}">{{consoleUrl}}</a></td></tr>
+            {{#virtualOfficeUrl}}<tr><td class="v" style="font-weight:400;"><strong>{{virtualOfficeName}}</strong>: chat, channels and calls with the team<br /><a href="{{virtualOfficeUrl}}">{{virtualOfficeUrl}}</a></td></tr>{{/virtualOfficeUrl}}
+            {{#academyUrl}}<tr><td class="v" style="font-weight:400;"><strong>The Oortcloud Academy</strong>: your courses and the Oortcloud Handbook<br /><a href="{{academyUrl}}">{{academyUrl}}</a></td></tr>{{/academyUrl}}
+          </table>
+        </mj-text>
+        <mj-text>Each one asks you to sign in with Afiax IAM: use {{email}} and the password and security key from step 1.</mj-text>
+
+        <mj-raw>{{#hasCourses}}</mj-raw>
+        <mj-text mj-class="h2">Step 3: your required training</mj-text>
+        <mj-text padding="4px 0 18px 0">
+          <table class="em-details" role="presentation" cellpadding="0" cellspacing="0">
+            {{#courses}}
+            <tr><td class="v" style="font-weight:400;"><strong>{{#url}}<a href="{{url}}">{{title}}</a>{{/url}}{{^url}}{{title}}{{/url}}</strong><br /><span style="color:#64748B;">Due {{dueOn}}</span></td></tr>
+            {{/courses}}
+          </table>
+        </mj-text>
+        <mj-raw>{{/hasCourses}}</mj-raw>
+
+        <!-- 5. What happens next -->
+        <mj-text mj-class="h2">What happens next</mj-text>
+        <mj-text>
+          {{#managerName}}{{managerName}} will{{/managerName}}{{^managerName}}Your manager will{{/managerName}} take you through your first tasks. What you can see in each system follows your role; if something you need is missing, ask them.
+        </mj-text>
+
+        <!-- 6. Help -->
+        <mj-text padding="8px 0 18px 0">
+          <table class="em-help" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td>
+              <strong style="color:#1B2A4A;">Need help?</strong><br />
+              About your work: {{#managerName}}ask {{managerName}}{{#managerEmail}} at <a href="mailto:{{managerEmail}}">{{managerEmail}}</a>{{/managerEmail}}.{{/managerName}}{{^managerName}}ask your manager.{{/managerName}}<br />
+              Trouble signing in: email <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>.
+            </td></tr>
+          </table>
+        </mj-text>
+
+        <mj-text mj-class="small" padding="0">
+          Not expecting this? Tell <a href="mailto:{{supportEmail}}">{{supportEmail}}</a> and don't use the link.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./partials/oortcloud-footer.mjml" />
+  </mj-body>
+</mjml>

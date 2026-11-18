@@ -1,0 +1,48 @@
+Subject: Welcome to Oortcloud, Wanjiru
+
+Welcome to Oortcloud, Wanjiru
+
+We're glad you're joining us in Engineering. This email has everything you need for your first day: one account for every Oortcloud system, and where to find your work.
+
+  Your role:     Engineering
+  Your manager:  Grace Achieng (grace@oortcloudcomputing.co.ke)
+  You start:     1 Dec 2026
+  Your sign-in:  wanjiru@oortcloudcomputing.co.ke
+
+STEP 1: SET UP YOUR SIGN-IN
+
+You'll use one account, Afiax IAM, for everything at Oortcloud. Set a password and a security key (an authenticator app, a passkey or a security key): Oortcloud requires both for every staff member.
+The link works once, for a few days:
+https://iam.afiax.africa/ui/login/user/invite?userID=1&code=EXAMPLE
+
+STEP 2: WHERE YOU'LL WORK
+
+The Oortcloud Console: customers, tenants, people and your team's work
+  https://console.afiax.africa/console
+Oortcloud Virtual Office: chat, channels and calls with the team
+  https://office.chat.afiax.africa
+The Oortcloud Academy: your courses and the Oortcloud Handbook
+  https://academy.afiax.africa/lms
+
+Each one asks you to sign in with Afiax IAM: use wanjiru@oortcloudcomputing.co.ke and the password and security key from step 1.
+
+STEP 3: YOUR REQUIRED TRAINING
+
+  Oortcloud Handbook, due 15 Dec 2026
+  https://academy.afiax.africa/lms/courses/oortcloud-handbook
+  Health Data Privacy and Security, due 31 Dec 2026
+  https://academy.afiax.africa/lms/courses/health-data-privacy
+
+WHAT HAPPENS NEXT
+
+Grace Achieng will take you through your first tasks. What you can see in each system follows your role; if something you need is missing, ask them.
+
+NEED HELP?
+
+About your work: ask Grace Achieng at grace@oortcloudcomputing.co.ke.
+Trouble signing in: email support@afiax.africa.
+
+Not expecting this? Tell support@afiax.africa and don't use the link.
+
+Sent by Oortcloud, Oort Cloud Computing Limited, the company behind Afiax Connected Healthcare.
+Oortcloud will never ask for your password by email or phone.
