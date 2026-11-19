@@ -1,0 +1,12 @@
+{
+  "subject": "You've been added to {{facilityName}} on Afiax",
+  "fields": {
+    "firstName": "The person's first name.",
+    "email": "Their Afiax IAM sign-in email.",
+    "facilityName": "The facility that added them.",
+    "roleLabel": "Optional. Their role there, e.g. \"Nurse\".",
+    "addedBy": "Optional. Who added them.",
+    "openUrl": "Straight into that facility: provider./signin?project=<project>&iam=1.",
+    "supportEmail": "Afiax support address."
+  }
+}

@@ -139,6 +139,8 @@ export async function buildEmails() {
   for (const file of files) built.push(await buildEmail(file));
   writeNodeModule(built);
   writePythonData(built, 'oortcloud');
+  // The console also sends one Afiax email: "You've been added to <facility>" (one identity per person)
+  writePythonData(built, 'afiax');
   writePreviewIndex(built);
   console.log('Done. Previews: dist/preview/index.html');
 }

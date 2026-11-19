@@ -1,0 +1,33 @@
+You've been added to {{facilityName}}
+
+Hello {{firstName}},
+
+{{#addedBy}}{{addedBy}} added you to {{facilityName}} on Afiax{{/addedBy}}{{^addedBy}}{{facilityName}} added you to its Afiax account{{/addedBy}}{{#roleLabel}} as {{roleLabel}}{{/roleLabel}}. You already have an Afiax IAM account, so there's nothing to set up: you sign in with the same email, {{email}}, and the same password or passkey.
+
+  Facility:         {{facilityName}}
+{{#roleLabel}}
+  Your role there:  {{roleLabel}}
+{{/roleLabel}}
+  Your sign-in:     {{email}}
+
+GETTING STARTED
+
+Open {{facilityName}}:
+{{openUrl}}
+
+Next time, open Afiax as usual: after you sign in, Afiax asks which facility you're working at today.
+
+WHAT HAPPENS NEXT
+
+Your other facilities don't change. What you can see and do at {{facilityName}} follows the role it gave you; if something you need is missing, ask {{#addedBy}}{{addedBy}}{{/addedBy}}{{^addedBy}}{{facilityName}}'s administrator{{/addedBy}}.
+
+NEED HELP?
+
+About your role: ask {{#addedBy}}{{addedBy}}{{/addedBy}}{{^addedBy}}{{facilityName}}'s administrator{{/addedBy}}.
+Trouble signing in: email Afiax support at {{supportEmail}}.
+
+Not expecting this? Tell Afiax support at {{supportEmail}}.
+
+--
+Sent by Afiax Connected Healthcare, a service of Oort Cloud Computing Limited.
+Afiax will never ask for your password by email or phone.

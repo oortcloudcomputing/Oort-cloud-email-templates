@@ -1,0 +1,58 @@
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-include path="./partials/afiax-head.mjml" />
+    <mj-title>You've been added to {{facilityName}}</mj-title>
+    <mj-preview>Same Afiax IAM account: no new password. Open {{facilityName}} from this email.</mj-preview>
+  </mj-head>
+
+  <mj-body background-color="#F1F5F9" width="600px">
+    <mj-include path="./partials/afiax-header.mjml" />
+
+    <mj-section background-color="#ffffff" padding="18px 32px 30px 32px">
+      <mj-column>
+        <mj-text mj-class="h1">You've been added to {{facilityName}}</mj-text>
+        <mj-text>Hello {{firstName}},</mj-text>
+        <mj-text>
+          {{#addedBy}}{{addedBy}} added you to {{facilityName}} on Afiax{{/addedBy}}{{^addedBy}}{{facilityName}} added you to its Afiax account{{/addedBy}}{{#roleLabel}} as {{roleLabel}}{{/roleLabel}}. You already have an Afiax IAM account, so there's nothing to set up: you sign in with the same email, {{email}}, and the same password or passkey.
+        </mj-text>
+
+        <mj-text padding="4px 0 22px 0">
+          <table class="em-details" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td class="k">Facility</td><td class="v">{{facilityName}}</td></tr>
+            {{#roleLabel}}<tr><td class="k">Your role there</td><td class="v">{{roleLabel}}</td></tr>{{/roleLabel}}
+            <tr><td class="k" style="border-bottom:0;">Your sign-in</td><td class="v" style="border-bottom:0;">{{email}}</td></tr>
+          </table>
+        </mj-text>
+
+        <mj-text mj-class="h2">Getting started</mj-text>
+        <mj-button href="{{openUrl}}">Open {{facilityName}}</mj-button>
+        <mj-text mj-class="small" padding="0 0 18px 0">
+          If the button doesn't work, copy this link into your browser:<br /><span class="em-url">{{openUrl}}</span>
+        </mj-text>
+        <mj-text>
+          Next time, open Afiax as usual: after you sign in, Afiax asks which facility you're working at today.
+        </mj-text>
+
+        <mj-text mj-class="h2">What happens next</mj-text>
+        <mj-text>
+          Your other facilities don't change. What you can see and do at {{facilityName}} follows the role it gave you; if something you need is missing, ask {{#addedBy}}{{addedBy}}{{/addedBy}}{{^addedBy}}{{facilityName}}'s administrator{{/addedBy}}.
+        </mj-text>
+
+        <mj-text padding="8px 0 18px 0">
+          <table class="em-help" role="presentation" cellpadding="0" cellspacing="0">
+            <tr><td>
+              <strong style="color:#1B2A4A;">Need help?</strong><br />
+              About your role: ask {{#addedBy}}{{addedBy}}{{/addedBy}}{{^addedBy}}{{facilityName}}'s administrator{{/addedBy}}.<br />
+              Trouble signing in: email Afiax support at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>.
+            </td></tr>
+          </table>
+        </mj-text>
+        <mj-text mj-class="small" padding="0">
+          Not expecting this? Tell Afiax support at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-include path="./partials/afiax-footer.mjml" />
+  </mj-body>
+</mjml>

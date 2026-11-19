@@ -1,0 +1,33 @@
+Subject: You've been added to Kisumu West Clinic on Afiax
+
+You've been added to Kisumu West Clinic
+
+Hello Akinyi,
+
+Dr Omondi added you to Kisumu West Clinic on Afiax as Nurse. You already have an Afiax IAM account, so there's nothing to set up: you sign in with the same email, akinyi@example.com, and the same password or passkey.
+
+  Facility:         Kisumu West Clinic
+  Your role there:  Nurse
+  Your sign-in:     akinyi@example.com
+
+GETTING STARTED
+
+Open Kisumu West Clinic:
+https://provider.afiax.africa/signin?project=EXAMPLE&iam=1
+
+Next time, open Afiax as usual: after you sign in, Afiax asks which facility you're working at today.
+
+WHAT HAPPENS NEXT
+
+Your other facilities don't change. What you can see and do at Kisumu West Clinic follows the role it gave you; if something you need is missing, ask Dr Omondi.
+
+NEED HELP?
+
+About your role: ask Dr Omondi.
+Trouble signing in: email Afiax support at support@afiax.africa.
+
+Not expecting this? Tell Afiax support at support@afiax.africa.
+
+--
+Sent by Afiax Connected Healthcare, a service of Oort Cloud Computing Limited.
+Afiax will never ask for your password by email or phone.
