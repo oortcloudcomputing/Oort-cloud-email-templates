@@ -23,8 +23,14 @@ supply. Write or update the spec first, then the template.
 The console renders the `oortcloud` brand from `dist/python/oortcloud-email-templates.json`
 (copied to oortcloud_console/email_templates.json) with the same Mustache subset as Afiax FHIR.
 
-Not covered yet: Afiax IAM (Zitadel) sign-in and verification emails, Zulip notifications,
-and the built-in Frappe notifications on client Finance, HR and Academy sites.
+Sent outside this kit, branded where they are sent (ADR-015 §11):
+- Afiax IAM (Zitadel): invitation, set-up, password reset, email verification and password changed,
+  written to CONTENT.md's rules (afiax-platform-engineering scripts/tools/uat-iam-emails.py), in the
+  Afiax label policy (uat-iam-branding.py).
+- Frappe's own emails on Oortcloud's site: Afiax logo and Oortcloud footer (oortcloud_console
+  branding.py). Customers' ERPNext sites send no email.
+- Afiax Chat (Zulip): sender "Afiax Chat", the Afiax logo; Zulip's own email wording is unchanged
+  (it is compiled into the Zulip image).
 
 ## Spec template
 
